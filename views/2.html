@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>s</title>
+    <%-include ../public/html/css.html %>
+    <style type="text/css">
+      a:link {color:#fff}   /* 未被访问的链接 */
+      a:visited {color:#fff;}  /* 已被访问的链接 */
+      a:hover {
+        color:red;
+        background-color: blue
+        }  /* 鼠标指针移动到链接上 */
+      a:active {color:red;} /* 正在被点击的链接 */
+      li{
+        overflow: hidden;
+        transition: inherit;
+      }
+    #css1 li a{
+      padding: 0px;
+
+    }
+    div{
+      overflow: hidden;
+    }
+    #ditu {
+      position: absolute;
+      z-index: -2;
+      overflow: hidden;
+    }
+    #ditu,#ditu #img,#ditu #img div{
+        padding: 0px;
+        margin:0px;
+
+        height: 600px;
+        width: 100%;
+
+        /* position: absolute; */
+        z-index: -2;
+        overflow: hidden;
+
+    }
+    #ditu #yd{
+      margin-top: 550px;
+      margin-left: 60%;
+      color: #fff;
+      font-size: 20px;
+      z-index: 999;
+
+    }
+    body{
+      margin-top: 0px;
+      padding-top: 0px;
+      padding:0px;
+      margin:0px;
+
+    }
+    #ce1{
+      color: #fff;
+      padding-left:15%;
+      background-image: url(/images/newxitong_5.jpg);
+    }
+    #ce2{
+      padding-right:15%;
+      background-image: url(/images/newxitong_7.jpg);
+    }
+
+    </style>
+</head>
+<body id="body">
+  <!-- 底图开始 start -->
+    <div id="ditu">
+      <div id="img">
+        <div id="img01"><img width="100%" height="100%" src="/images/newxitong_1.jpg"></div>
+        <div id="img02"><img width="100%" height="100%" src="/images/newxitong_2.jpg"></div>
+        <div id="img03"><img width="100%" height="100%" src="/images/newxitong_3.jpg"></div>
+        <div id="img04"><img width="100%" height="100%" src="/images/newxitong_4.jpg"></div>
+      </div>
+      <div></div>
+      <div id="yd">
+        <span id="yd1">●</span>
+        <span id="yd2">●</span>
+        <span id="yd3">●</span>
+        <span id="yd4">●</span>
+      </div>
+    </div>
+<!-- 底图结束 end-->
+<!-- 顶部导航 start-->
+      <div style="height: 50px"></div>
+<!-- 顶部导航 end -->
+<!-- 导航 start-->
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3">
+            <img src="/images/home_02.jpg" alt="..." class="img-rounded" width="100%" height="100px">
+          </div>
+
+          <div class="col-xs-9" >
+            <div style="height: 40px;line-height: 40px;margin-top: 60px">
+              <ul class="nav nav-pills nav-justified" id="css1">
+                <li role="presentation"><a href="#">网站首页</a></li>
+                <li role="presentation"><a href="#">公司简介</a></li>
+                <li role="presentation"><a href="#">新闻动态</a></li>
+                <li role="presentation"><a href="#">产品系列</a></li>
+                <li role="presentation"><a href="#">解决方案</a></li>
+                <li role="presentation"><a href="#">联系我们</a></li>
+                <li role="presentation"><a href="#">同济大学研究院</a></li>
+                <li role="presentation"><a href="#">员工窗口</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+<!-- 导航  end -->
+    <div class="container">
+      <div style="margin-top: 250px; position:absolute;">
+        <div class="row" style="color: #fff">
+          <div class="col-xs-12">
+            <p>坚持奉行不断求效求新精神</p>
+            <p>力争成为全球卫星通信行业值得信赖的专业服务商</p>
+          </div>
+
+        </div>
+      </div>
+    <div class="row" style="margin-top:450px;height: 400px">
+      <div class="col-xs-7" id="ce1">
+        <div style="height: 400px;padding: 20px 0px">
+          <p>广东同星通信技术有限公司（“同星通信”或“ToneSat”）是东莞同济大学研究院旗下专注于卫星通信产品开发、制造、销售和完整解决方案服务的科技企业。公司成立于2016年，注册资本1000万，坐落于广东东莞市美丽的松山湖畔。
+      同星通信总部“东莞同济大学研究院”是东莞市人民政府和同济大学联合创办的开放式产学研平台，也是光科学前沿研究、新材料和通信技术领域高端技术研发与产业化基地。2015年被认定为广东省新型研发机构，并获批广东省超材料工程技术研究中心。
+
+      公司拥有一支卫星通信行业耕耘多年的核心团队，具备自主知识产权和创新能力，在卫星天线研制、生产，卫星通信系统与地面通信网络集成建设方面积累了丰富经验，对行业发展趋势、用户应用需求有深刻理解。借助于总部基础研究成果和多年科研沉淀，同星通信获得当今通信系统、相控阵天线、RF集成模块和复合超材料等相关领域先进技术的注入与支持，公司整体实力与产品拓展能力显著提升。业务层面，公司定位于卫星通信设备制造商和“天地一体”地面无线网络综合集成商，为用户提供先进的卫星通信解决方案、通信集成系统及通信终端产品。</p>
+        </div>
+      </div>
+      <div class="col-xs-5" id="ce2">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <%-include ../public/html/js.html %>
+    <script type="text/javascript">
+      var i=1;
+      function bjqh(){
+        var aaa = setInterval(function(){
+            $("#ditu").css("background-image","url(/images/newxitong_"+i+".jpg)",);
+              i=++i;
+              if (i>4) {
+                i=1;
+              }
+        },3000);
+      }
+      //bjqh();
+      function bjqh1(){
+        var aaa = setInterval(function(){
+            $("#ditu #img div").hide();
+            $('#img0'+i).show();
+            $('#yd span').css('color','#fff');
+            $('#yd'+i).css({'color':'green'});
+              i=++i;
+              if (i>4) {
+                i=1;
+              }
+        },3000);
+      }
+      bjqh1();
+      function imgurl(){
+        $('img').attr({'src':""})
+      }
+      imgurl();
+    </script>
+</body>
+</html>
