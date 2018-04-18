@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>s</title>
-    <%-include ../public/html/css.html %>
+  <title>s</title>
+  <%-include ../public/html/css.html %>
     <style type="text/css">
-      a:link {color:#fff}   /* 未被访问的链接 */
-      a:visited {color:#fff;}  /* 已被访问的链接 */
+      a:link {
+        color: #fff
+      }
+
+      /* 未被访问的链接 */
+
+      a:visited {
+        color: #fff;
+      }
+
+      /* 已被访问的链接 */
+
       a:hover {
-        color:red;
+        color: red;
         background-color: blue
-        }  /* 鼠标指针移动到链接上 */
-      a:active {color:red;} /* 正在被点击的链接 */
-      li{
+      }
+
+      /* 鼠标指针移动到链接上 */
+
+      a:active {
+        color: red;
+      }
+
+      /* 正在被点击的链接 */
+
+      li {
         overflow: hidden;
         transition: inherit;
       }
-    #css1 li a{
-      padding: 0px;
 
-    }
-    div{
-      overflow: hidden;
-    }
-    #ditu {
-      position: absolute;
-      z-index: -2;
-      overflow: hidden;
-    }
-    #ditu,#ditu #img,#ditu #img div{
+      #css1 li a {
         padding: 0px;
-        margin:0px;
+
+      }
+
+      div {
+        overflow: hidden;
+      }
+
+      #ditu {
+        position: absolute;
+        z-index: -2;
+        overflow: hidden;
+      }
+
+      #ditu,
+      #ditu #img,
+      #ditu #img div {
+        padding: 0px;
+        margin: 0px;
 
         height: 600px;
         width: 100%;
@@ -38,162 +63,392 @@
         z-index: -2;
         overflow: hidden;
 
-    }
-    #ditu #yd{
-      margin-top: 550px;
-      margin-left: 60%;
-      color: #fff;
-      font-size: 20px;
-      z-index: 999;
+      }
 
-    }
-    body{
-      margin-top: 0px;
-      padding-top: 0px;
-      padding:0px;
-      margin:0px;
+      #ditu #yd {
+        margin-top: 550px;
+        margin-left: 60%;
+        color: #fff;
+        font-size: 20px;
+        z-index: 999;
 
-    }
-    #ce1{
-      color: #fff;
-      padding-left:15%;
-      background-image: url(/images/newxitong_5.jpg);
-    }
-    #ce2{
-      padding-right:15%;
-      background-image: url(/images/newxitong_7.jpg);
-    }
+      }
 
+      body {
+        margin-top: 0px;
+        padding-top: 0px;
+        padding: 0px;
+        margin: 0px;
+
+      }
+
+      #ce1 {
+        color: #fff;
+        padding-left: 15%;
+        background-image: url(/images/newxitong_5.jpg);
+      }
+
+      #ce2 {
+        padding-right: 15%;
+        background-image: url(/images/newxitong_7.jpg);
+      }
+
+      .bjcolor {
+        padding: 20px 10%;
+        color: #ffffff;
+
+      }
     </style>
 </head>
+
 <body id="body">
   <!-- 底图开始 start -->
-    <div id="ditu">
-      <div id="img">
-        <div id="img01"><img width="100%" height="100%" src="/images/newxitong_1.jpg"></div>
-        <div id="img02"><img width="100%" height="100%" src="/images/newxitong_2.jpg"></div>
-        <div id="img03"><img width="100%" height="100%" src="/images/newxitong_3.jpg"></div>
-        <div id="img04"><img width="100%" height="100%" src="/images/newxitong_4.jpg"></div>
+  <div id="ditu">
+    <div id="img">
+      <div id="img01">
+        <img width="100%" height="100%" src="/images/newxitong_11.jpg">
       </div>
-      <div></div>
-      <div id="yd">
-        <span id="yd1">●</span>
-        <span id="yd2">●</span>
-        <span id="yd3">●</span>
-        <span id="yd4">●</span>
+      <div id="img02">
+        <img width="100%" height="100%" src="/images/newxitong_12.jpg">
+      </div>
+      <div id="img03">
+        <img width="100%" height="100%" src="/images/newxitong_13.jpg">
+      </div>
+      <div id="img04">
+        <img width="100%" height="100%" src="/images/newxitong_14.jpg">
       </div>
     </div>
-<!-- 底图结束 end-->
-<!-- 顶部导航 start-->
-      <div style="height: 50px"></div>
-<!-- 顶部导航 end -->
-<!-- 导航 start-->
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-3">
-            <img src="/images/home_02.jpg" alt="..." class="img-rounded" width="100%" height="100px">
-          </div>
-
-          <div class="col-xs-9" >
-            <div style="height: 40px;line-height: 40px;margin-top: 60px">
-              <ul class="nav nav-pills nav-justified" id="css1">
-                <li role="presentation"><a href="#">网站首页</a></li>
-                <li role="presentation"><a href="#">公司简介</a></li>
-                <li role="presentation"><a href="#">新闻动态</a></li>
-                <li role="presentation"><a href="#">产品系列</a></li>
-                <li role="presentation"><a href="#">解决方案</a></li>
-                <li role="presentation"><a href="#">联系我们</a></li>
-                <li role="presentation"><a href="#">同济大学研究院</a></li>
-                <li role="presentation"><a href="#">员工窗口</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+    <div></div>
+    <div id="yd">
+      <span id="yd1">●</span>
+      <span id="yd2">●</span>
+      <span id="yd3">●</span>
+      <span id="yd4">●</span>
+    </div>
+  </div>
+  <!-- 底图结束 end-->
+  <!-- 顶部导航 start-->
+  <div style="height: 50px"></div>
+  <!-- 顶部导航 end -->
+  <!-- 导航 start-->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="/images/home_021111.jpg" alt="..." class="img-rounded" width="100%" height="100px">
       </div>
 
-<!-- 导航  end -->
-    <div class="container">
-      <div style="margin-top: 250px; position:absolute;">
-        <div class="row" style="color: #fff">
-          <div class="col-xs-12">
-            <p>坚持奉行不断求效求新精神</p>
-            <p>力争成为全球卫星通信行业值得信赖的专业服务商</p>
-          </div>
-
-        </div>
-      </div>
-    <div class="row" style="margin-top:450px;height: 400px">
-      <div class="col-xs-7" id="ce1">
-        <div style="height: 400px;padding: 20px 0px">
-          <p>广东同星通信技术有限公司（“同星通信”或“ToneSat”）是东莞同济大学研究院旗下专注于卫星通信产品开发、制造、销售和完整解决方案服务的科技企业。公司成立于2016年，注册资本1000万，坐落于广东东莞市美丽的松山湖畔。
-      同星通信总部“东莞同济大学研究院”是东莞市人民政府和同济大学联合创办的开放式产学研平台，也是光科学前沿研究、新材料和通信技术领域高端技术研发与产业化基地。2015年被认定为广东省新型研发机构，并获批广东省超材料工程技术研究中心。
-
-      公司拥有一支卫星通信行业耕耘多年的核心团队，具备自主知识产权和创新能力，在卫星天线研制、生产，卫星通信系统与地面通信网络集成建设方面积累了丰富经验，对行业发展趋势、用户应用需求有深刻理解。借助于总部基础研究成果和多年科研沉淀，同星通信获得当今通信系统、相控阵天线、RF集成模块和复合超材料等相关领域先进技术的注入与支持，公司整体实力与产品拓展能力显著提升。业务层面，公司定位于卫星通信设备制造商和“天地一体”地面无线网络综合集成商，为用户提供先进的卫星通信解决方案、通信集成系统及通信终端产品。</p>
-        </div>
-      </div>
-      <div class="col-xs-5" id="ce2">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
-          </div>
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+      <div class="col-xs-9">
+        <div style="height: 40px;line-height: 40px;margin-top: 60px">
+          <ul class="nav nav-pills nav-justified" id="css1">
+            <li role="presentation">
+              <a href="#">网站首页</a>
+            </li>
+            <li role="presentation">
+              <a href="#">公司简介</a>
+            </li>
+            <li role="presentation">
+              <a href="#">新闻动态</a>
+            </li>
+            <li role="presentation">
+              <a href="#">产品系列</a>
+            </li>
+            <li role="presentation">
+              <a href="#">解决方案</a>
+            </li>
+            <li role="presentation">
+              <a href="#">联系我们</a>
+            </li>
+            <li role="presentation">
+              <a href="#">同济大学研究院</a>
+            </li>
+            <li role="presentation">
+              <a href="#">员工窗口</a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
-    </div>
 
-    <%-include ../public/html/js.html %>
+  </div>
+
+  <div class="row" style="margin-top: 450px">
+    <div class="col-xs-12 bjcolor">
+      <div class="row">
+        <div class="col-xs-6">
+          <img src="/images/a.jpg" alt="" width="100%">
+        </div>
+        <div class="col-xs-6">
+          <h3>公安卫星通信解决方案</h3>
+          <p style="white-space:normal;text-indent:2em;">
+            <span style="text-indent:-0.31in;">窄带以语音为主，宽带以数据为主；</span>
+          </p>
+          <p style="text-indent:2em;">
+            <span style="text-indent:-0.31in;">窄带解决命令传达、通信保障,宽带解决大数据信息传输、应急组网；</span>
+          </p>
+          <p style="text-indent:2em;">
+            <span style="text-indent:-0.31in;">宽带和窄带集群系统产品融合形成立体、可靠、实时、直观等指挥调度通信网络。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <b>
+              <u>典型</u>
+            </b>
+            <b>
+              <u>应用场景：</u>
+              <span></span>
+            </b>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>1</span>）高清视频回传：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span style="text-indent:0cm;"> 在日常应用中以及应对紧急事件时，可以通过通信卫星实时将现场高清图像实时传送到各级指挥中心，工作人员可随时检索回放任一摄像头的监控图像，便于应急事件处理。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>2</span>）基站回传中继链路备份：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span style="text-indent:21pt;"> 当地面光纤中断时，基站的传输通道切换到宽带卫星链路，保障基站与核心网之间链路通畅，指挥调度终端正常使用，应急救援感知不到光纤链路故障。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span></span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span> </span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>3</span>） 移动集群基站：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            卫星通信车到达应急区域，可以快速建立集群网络，集群基站通过车载卫通天线建立的卫星链路与省级指挥中心的核心网连接，公安人员可在移动集群基站网络内进行通话及数据传输，实现应急通信网络的快速、机动部署。
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 bjcolor">
+      <div class="row">
+        <div class="col-xs-6">
+          <img src="/images/a.jpg" alt="" width="100%">
+        </div>
+        <div class="col-xs-6">
+          <h3>公安卫星通信解决方案</h3>
+          <p style="white-space:normal;text-indent:2em;">
+            <span style="text-indent:-0.31in;">窄带以语音为主，宽带以数据为主；</span>
+          </p>
+          <p style="text-indent:2em;">
+            <span style="text-indent:-0.31in;">窄带解决命令传达、通信保障,宽带解决大数据信息传输、应急组网；</span>
+          </p>
+          <p style="text-indent:2em;">
+            <span style="text-indent:-0.31in;">宽带和窄带集群系统产品融合形成立体、可靠、实时、直观等指挥调度通信网络。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <b>
+              <u>典型</u>
+            </b>
+            <b>
+              <u>应用场景：</u>
+              <span></span>
+            </b>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>1</span>）高清视频回传：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span style="text-indent:0cm;"> 在日常应用中以及应对紧急事件时，可以通过通信卫星实时将现场高清图像实时传送到各级指挥中心，工作人员可随时检索回放任一摄像头的监控图像，便于应急事件处理。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>2</span>）基站回传中继链路备份：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span style="text-indent:21pt;"> 当地面光纤中断时，基站的传输通道切换到宽带卫星链路，保障基站与核心网之间链路通畅，指挥调度终端正常使用，应急救援感知不到光纤链路故障。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span></span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span> </span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>3</span>） 移动集群基站：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            卫星通信车到达应急区域，可以快速建立集群网络，集群基站通过车载卫通天线建立的卫星链路与省级指挥中心的核心网连接，公安人员可在移动集群基站网络内进行通话及数据传输，实现应急通信网络的快速、机动部署。
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 bjcolor">
+      <div class="row">
+        <div class="col-xs-6">
+          <img src="/images/a.jpg" alt="" width="100%">
+        </div>
+        <div class="col-xs-6">
+          <h3>公安卫星通信解决方案</h3>
+          <p style="white-space:normal;text-indent:2em;">
+            <span style="text-indent:-0.31in;">窄带以语音为主，宽带以数据为主；</span>
+          </p>
+          <p style="text-indent:2em;">
+            <span style="text-indent:-0.31in;">窄带解决命令传达、通信保障,宽带解决大数据信息传输、应急组网；</span>
+          </p>
+          <p style="text-indent:2em;">
+            <span style="text-indent:-0.31in;">宽带和窄带集群系统产品融合形成立体、可靠、实时、直观等指挥调度通信网络。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <b>
+              <u>典型</u>
+            </b>
+            <b>
+              <u>应用场景：</u>
+              <span></span>
+            </b>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>1</span>）高清视频回传：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span style="text-indent:0cm;"> 在日常应用中以及应对紧急事件时，可以通过通信卫星实时将现场高清图像实时传送到各级指挥中心，工作人员可随时检索回放任一摄像头的监控图像，便于应急事件处理。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>2</span>）基站回传中继链路备份：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span style="text-indent:21pt;"> 当地面光纤中断时，基站的传输通道切换到宽带卫星链路，保障基站与核心网之间链路通畅，指挥调度终端正常使用，应急救援感知不到光纤链路故障。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span></span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span> </span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>3</span>） 移动集群基站：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            卫星通信车到达应急区域，可以快速建立集群网络，集群基站通过车载卫通天线建立的卫星链路与省级指挥中心的核心网连接，公安人员可在移动集群基站网络内进行通话及数据传输，实现应急通信网络的快速、机动部署。
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 bjcolor">
+      <div class="row">
+        <div class="col-xs-6">
+          <img src="/images/a.jpg" alt="" width="100%">
+        </div>
+        <div class="col-xs-6">
+          <h3>公安卫星通信解决方案</h3>
+          <p style="white-space:normal;text-indent:2em;">
+            <span style="text-indent:-0.31in;">窄带以语音为主，宽带以数据为主；</span>
+          </p>
+          <p style="text-indent:2em;">
+            <span style="text-indent:-0.31in;">窄带解决命令传达、通信保障,宽带解决大数据信息传输、应急组网；</span>
+          </p>
+          <p style="text-indent:2em;">
+            <span style="text-indent:-0.31in;">宽带和窄带集群系统产品融合形成立体、可靠、实时、直观等指挥调度通信网络。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <b>
+              <u>典型</u>
+            </b>
+            <b>
+              <u>应用场景：</u>
+              <span></span>
+            </b>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>1</span>）高清视频回传：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span style="text-indent:0cm;"> 在日常应用中以及应对紧急事件时，可以通过通信卫星实时将现场高清图像实时传送到各级指挥中心，工作人员可随时检索回放任一摄像头的监控图像，便于应急事件处理。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>2</span>）基站回传中继链路备份：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span style="text-indent:21pt;"> 当地面光纤中断时，基站的传输通道切换到宽带卫星链路，保障基站与核心网之间链路通畅，指挥调度终端正常使用，应急救援感知不到光纤链路故障。</span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span></span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span> </span>
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            <span>3</span>） 移动集群基站：
+          </p>
+          <p class="MsoNormal" style="text-indent:2em;">
+            卫星通信车到达应急区域，可以快速建立集群网络，集群基站通过车载卫通天线建立的卫星链路与省级指挥中心的核心网连接，公安人员可在移动集群基站网络内进行通话及数据传输，实现应急通信网络的快速、机动部署。
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12"></div>
+    <div class="col-xs-12"></div>
+    <div class="col-xs-12"></div>
+    <div class="col-xs-12"></div>
+  </div>
+
+
+
+  <!-- 导航  end -->
+
+  <div style="margin-top: 250px; position:fixed;">
+    <div class="row" style="color: #fff">
+      <div class="col-xs-12">
+        <p>坚持奉行不断求效求新精神</p>
+        <p>力争成为全球卫星通信行业值得信赖的专业服务商</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <%-include ../public/html/js.html %>
     <script type="text/javascript">
-      var i=1;
-      function bjqh(){
-        var aaa = setInterval(function(){
-            $("#ditu").css("background-image","url(/images/newxitong_"+i+".jpg)",);
-              i=++i;
-              if (i>4) {
-                i=1;
-              }
-        },3000);
+      var i = 1;
+      function bjqh() {
+        var aaa = setInterval(function () {
+          $("#ditu").css("background-image", "url(/images/newxitong_" + i + ".jpg)", );
+          i = ++i;
+          if (i > 4) {
+            i = 1;
+          }
+        }, 3000);
       }
       //bjqh();
-      function bjqh1(){
-        var aaa = setInterval(function(){
-            $("#ditu #img div").hide();
-            $('#img0'+i).show();
-            $('#yd span').css('color','#fff');
-            $('#yd'+i).css({'color':'green'});
-              i=++i;
-              if (i>4) {
-                i=1;
-              }
-        },3000);
+      function bjqh1() {
+        var aaa = setInterval(function () {
+          $("#ditu #img div").hide();
+          $('#img0' + i).show();
+          $('#yd span').css('color', '#fff');
+          $('#yd' + i).css({ 'color': 'green' });
+          i = ++i;
+          if (i > 4) {
+            i = 1;
+          }
+          $('.bjcolor').each(function () {
+
+            $(this).css({ 'background-color': getcolor() })
+
+          })
+        }, 3000);
       }
       bjqh1();
-      function imgurl(){
-        $('img').attr({'src':""})
+      function imgurl() {
+        $('#dutu img').attr({ 'src': "" })
       }
       imgurl();
+      function getcolor() {
+        var x = '#' + Math.round(Math.random() * 1000000);
+        return x;
+      }
+      $('.bjcolor').each(function () {
+        $(this).css({ 'background-color': getcolor() })
+      })
+
     </script>
 </body>
+
 </html>
