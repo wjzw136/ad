@@ -11,5 +11,7 @@ router.get('/1', function(req, res, next) {
 router.get('/2', function(req, res, next) {
   res.render('2', { title: 'sdsd' });
 });
-
+router.get('/main', function(req, res, next) {
+  res.render('main', { title: 'sdsd' });
+});
 module.exports = router;

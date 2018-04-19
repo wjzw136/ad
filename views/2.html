@@ -4,100 +4,6 @@
 <head>
   <title>s</title>
   <%-include ../public/html/css.html %>
-    <style type="text/css">
-      a:link {
-        color: #fff
-      }
-
-      /* 未被访问的链接 */
-
-      a:visited {
-        color: #fff;
-      }
-
-      /* 已被访问的链接 */
-
-      a:hover {
-        color: red;
-        background-color: blue
-      }
-
-      /* 鼠标指针移动到链接上 */
-
-      a:active {
-        color: red;
-      }
-
-      /* 正在被点击的链接 */
-
-      li {
-        overflow: hidden;
-        transition: inherit;
-      }
-
-      #css1 li a {
-        padding: 0px;
-
-      }
-
-      div {
-        overflow: hidden;
-      }
-
-      #ditu {
-        position: absolute;
-        z-index: -2;
-        overflow: hidden;
-      }
-
-      #ditu,
-      #ditu #img,
-      #ditu #img div {
-        padding: 0px;
-        margin: 0px;
-
-        height: 420px;
-        width: 100%;
-
-        /* position: absolute; */
-        z-index: -2;
-        overflow: hidden;
-
-      }
-
-      #yd {
-        margin-left: 70%;
-        color: #fff;
-        font-size: 20px;
-        z-index: 999;
-
-      }
-
-      body {
-        margin-top: 0px;
-        padding-top: 0px;
-        padding: 0px;
-        margin: 0px;
-
-      }
-
-      #ce1 {
-        color: #fff;
-        padding-left: 15%;
-        background-image: url(/images/newxitong_5.jpg);
-      }
-
-      #ce2 {
-        padding-right: 15%;
-        background-image: url(/images/newxitong_7.jpg);
-      }
-
-      .bjcolor {
-        padding: 20px 10%;
-        color: #ffffff;
-
-      }
-    </style>
 </head>
 
 <body id="body">
@@ -117,63 +23,31 @@
         <img width="100%" height="100%" src="/images/newxitong_14.jpg">
       </div>
     </div>
+    <div style="z-index:100;margin-top:-100px;position: absolute;width: 100%">
+      <div class="row" style="color: #fff">
+        <div class="col-xs-6">
+          <p>坚持奉行不断求效求新精神</p>
+          <p>力争成为全球卫星通信行业值得信赖的专业服务商</p>
+        </div>
+        <div class="col-xs-6">
+          <div id="yd">
+            <span id="yd1">●</span>
+            <span id="yd2">●</span>
+            <span id="yd3">●</span>
+            <span id="yd4">●</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
 
   </div>
   <!-- 底图结束 end-->
   <!-- 导航 start-->
-  <div style="padding: 0px 10%;height: 400px;">
-    <div class="row">
-      <div class="col-xs-3">
-        <img src="/images/home_021111.jpg" alt="..." class="img-rounded" width="100%" height="100px">
-      </div>
-      <div class="col-xs-9">
-        <div style="height: 40px;line-height: 40px;margin-top:30px">
-          <ul class="nav nav-pills nav-justified" id="css1">
-            <li role="presentation">
-              <a href="#">网站首页</a>
-            </li>
-            <li role="presentation">
-              <a href="#">公司简介</a>
-            </li>
-            <li role="presentation">
-              <a href="#">新闻动态</a>
-            </li>
-            <li role="presentation">
-              <a href="#">产品系列</a>
-            </li>
-            <li role="presentation">
-              <a href="#">解决方案</a>
-            </li>
-            <li role="presentation">
-              <a href="#">联系我们</a>
-            </li>
-            <li role="presentation">
-              <a href="#">同济大学研究院</a>
-            </li>
-            <li role="presentation">
-              <a href="#">员工窗口</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div style="z-index:100;margin-top:230px ">
-      <div class="row" style="color: #fff">
-        <div class="col-xs-12">
-          <p>坚持奉行不断求效求新精神</p>
-          <p>力争成为全球卫星通信行业值得信赖的专业服务商</p>
-        </div>
-      </div>
-    </div>
-    <div id="yd">
-      <span id="yd1">●</span>
-      <span id="yd2">●</span>
-      <span id="yd3">●</span>
-      <span id="yd4">●</span>
-    </div>
-  </div>
+  <%-include ./header.html %>
 
-  <div class="row" style="margin-top: 0px">
+  <div class="row" style="margin-top: 500px">
     <div class="col-xs-12 bjcolor">
       <div class="row">
         <div class="col-xs-6">
@@ -418,7 +292,7 @@
 
   </div>
 
-
+  <%-include ./foo.html %>
 
   <!-- 导航  end -->
 
@@ -471,7 +345,7 @@
       $('.sdasdas').hover(
         function () {
           $(this).animate({
-            paddingLeft: '+50px', opacity: 'show'
+            paddingLeft: '+20px', opacity: 'show'
           }, 500);
         },
         function () {

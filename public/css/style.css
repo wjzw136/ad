@@ -3,7 +3,111 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: red
 }
-
+p{
+  text-indent:2em
+}
 a {
   color: red;
+}
+a:link {
+
+}
+
+/* 未被访问的链接 */
+
+a:visited {
+
+}
+
+/* 已被访问的链接 */
+
+a:hover {
+
+}
+
+/* 鼠标指针移动到链接上 */
+
+a:active {
+  color: red;
+}
+
+/* 正在被点击的链接 */
+
+li {
+  overflow: hidden;
+  transition: inherit;
+}
+
+#css1 li a {
+  padding: 0px;
+
+}
+
+div {
+  overflow: hidden;
+}
+
+#ditu {
+  position: absolute;
+  z-index: -2;
+  overflow: hidden;
+}
+
+#ditu,
+#ditu #img,
+#ditu #img div {
+  padding: 0px;
+  margin: 0px;
+
+  height: 600px;
+  width: 100%;
+
+  /* position: absolute; */
+  z-index: -2;
+  overflow: hidden;
+
+}
+
+#yd {
+  margin-left: 70%;
+  color: #fff;
+  font-size: 20px;
+  z-index: 999;
+
+}
+
+body {
+  margin-top: 0px;
+  padding-top: 0px;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+#ce1 {
+  color: #fff;
+  padding-left: 15%;
+  background-image: url(/images/newxitong_5.jpg);
+}
+
+#ce2 {
+  padding-right: 15%;
+  background-image: url(/images/newxitong_7.jpg);
+}
+
+.bjcolor {
+  padding: 20px 10%;
+  color: #ffffff;
+
+}
+.bjcolor .row{
+  padding:0 10%
+}
+.foo{
+  padding: 20px 10%;
+  background-color: darkgray
+
+}
+.main{
+  padding: 10px 10%;
 }
