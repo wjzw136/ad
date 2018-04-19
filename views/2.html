@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>s</title>
@@ -7,27 +7,29 @@
 </head>
 
 <body id="body">
+
+        <%-include ./header.html %>
   <!-- 底图开始 start -->
   <div id="ditu">
     <div id="img">
       <div id="img01">
-        <img width="100%" height="100%" src="/images/newxitong_11.jpg">
-      </div>
-      <div id="img02">
-        <img width="100%" height="100%" src="/images/newxitong_12.jpg">
-      </div>
-      <div id="img03">
-        <img width="100%" height="100%" src="/images/newxitong_13.jpg">
-      </div>
-      <div id="img04">
         <img width="100%" height="100%" src="/images/newxitong_14.jpg">
       </div>
+      <div id="img02">
+        <img width="100%" height="100%" src="/images/newxitong_15.jpg">
+      </div>
+      <div id="img03">
+        <img width="100%" height="100%" src="/images/newxitong_16.jpg">
+      </div>
+      <div id="img04">
+        <img width="100%" height="100%" src="/images/newxitong_17.jpg">
+      </div>
     </div>
-    <div style="z-index:100;margin-top:-100px;position: absolute;width: 100%">
+    <div style="
+    height: 80px; line-height: 80px; z-index:100;margin-top:-80px;position: absolute;width: 100%;background-color: cadetblue;opacity: 0.7;font-size: 16px">
       <div class="row" style="color: #fff">
         <div class="col-xs-6">
-          <p>坚持奉行不断求效求新精神</p>
-          <p>力争成为全球卫星通信行业值得信赖的专业服务商</p>
+          <p>坚持奉行不断求效求新精神，力争成为全球卫星通信行业值得信赖的专业服务商</p>
         </div>
         <div class="col-xs-6">
           <div id="yd">
@@ -45,13 +47,14 @@
   </div>
   <!-- 底图结束 end-->
   <!-- 导航 start-->
-  <%-include ./header.html %>
 
-  <div class="row" style="margin-top: 500px">
+  <div class="row">
     <div class="col-xs-12 bjcolor">
       <div class="row">
         <div class="col-xs-6">
-          <img src="/images/a.jpg" alt="" width="100%">
+          <div style="display:flex;align-items:center;height:500px">
+            <img src="/images/a.jpg" alt="" width="100%">
+          </div>
         </div>
         <div class="col-xs-6">
           <div class="sdasdas">
@@ -99,7 +102,9 @@
     <div class="col-xs-12 bjcolor">
       <div class="row">
         <div class="col-xs-6">
-          <img src="/images/a.jpg" alt="" width="100%" align="middle">
+          <div style="display:flex;align-items:center;height:500px">
+            <img src="/images/b.jpg" alt="" width="100%" align="middle">
+          </div>
         </div>
         <div class="col-xs-6">
           <div class="sdasdas">
@@ -147,7 +152,9 @@
     <div class="col-xs-12 bjcolor">
       <div class="row">
         <div class="col-xs-6">
-          <img src="/images/a.jpg" alt="" width="100%">
+          <div style="display:flex;align-items:center;height:500px">
+            <img src="/images/c.jpg" alt="" width="100%">
+          </div>
         </div>
         <div class="col-xs-6">
           <div class="sdasdas">
@@ -195,7 +202,9 @@
     <div class="col-xs-12 bjcolor">
       <div class="row">
         <div class="col-xs-6">
-          <img src="/images/a.jpg" alt="" width="100%">
+          <div style="display:flex;align-items:center;height:500px">
+            <img src="/images/d.jpg" alt="" width="100%">
+          </div>
         </div>
         <div class="col-xs-6">
           <div class="sdasdas">
@@ -243,7 +252,9 @@
     <div class="col-xs-12 bjcolor">
       <div class="row">
         <div class="col-xs-6">
-          <img src="/images/a.jpg" alt="" width="100%">
+          <div style="display:flex;align-items:center;height:500px">
+            <img src="/images/f.jpg" alt="" width="100%">
+          </div>
         </div>
         <div class="col-xs-6">
           <div class="sdasdas">
@@ -294,68 +305,68 @@
 
   <%-include ./foo.html %>
 
-  <!-- 导航  end -->
+    <!-- 导航  end -->
 
 
 
 
-  <%-include ../public/html/js.html %>
-    <script type="text/javascript">
-      var i = 1;
-      function bjqh() {
-        var aaa = setInterval(function () {
-          $("#ditu").css("background-image", "url(/images/newxitong_" + i + ".jpg)", );
-          i = ++i;
-          if (i > 4) {
-            i = 1;
-          }
-        }, 3000);
-      }
-      //bjqh();
-      function bjqh1() {
-        var aaa = setInterval(function () {
-          $("#ditu #img div").hide();
-          $('#img0' + i).fadeIn(500);
-          $('#yd span').css('color', '#fff');
-          $('#yd' + i).css({ 'color': 'green' });
-          i = ++i;
-          if (i > 4) {
-            i = 1;
-          }
-
-        }, 3000);
-      }
-      bjqh1();
-      function imgurl() {
-        $('#dutu img').attr({ 'src': "" })
-      }
-      imgurl();
-      function getcolor() {
-        var x = '#' + Math.round(Math.random() * 1000000);
-        return x;
-      }
-      $('.bjcolor').each(function () {
-        $(this).css({ 'background-color': getcolor() })
-      })
-      // function yidong(x, y) {
-      //   $('.' + x).animate({
-      //     marginLeft: y + 'px', opacity: 'show'
-      //   }, 500);
-      // }
-      $('.sdasdas').hover(
-        function () {
-          $(this).animate({
-            paddingLeft: '+20px', opacity: 'show'
-          }, 500);
-        },
-        function () {
-          $(this).animate({
-            paddingLeft: '0px', opacity: 'show'
-          }, 500);
+    <%-include ../public/html/js.html %>
+      <script type="text/javascript">
+        var i = 1;
+        function bjqh() {
+          var aaa = setInterval(function () {
+            $("#ditu").css("background-image", "url(/images/newxitong_" + i + ".jpg)");
+            i = ++i;
+            if (i > 4) {
+              i = 1;
+            }
+          }, 3000);
         }
-      )
+        //bjqh();
+        function bjqh1() {
+          var aaa = setInterval(function () {
+            $("#ditu #img div").hide();
+            $('#img0' + i).fadeIn(500);
+            $('#yd span').css('color', '#fff');
+            $('#yd' + i).css({ 'color': 'green' });
+            i = ++i;
+            if (i > 4) {
+              i = 1;
+            }
 
-    </script>
+          }, 3000);
+        }
+        bjqh1();
+        function imgurl() {
+          $('#dutu img').attr({ 'src': "" })
+        }
+        imgurl();
+        function getcolor() {
+          var x = '#' + Math.round(Math.random() * 1000000);
+          return x;
+        }
+        $('.bjcolor').each(function () {
+          $(this).css({ 'background-color': getcolor() })
+        })
+        // function yidong(x, y) {
+        //   $('.' + x).animate({
+        //     marginLeft: y + 'px', opacity: 'show'
+        //   }, 500);
+        // }
+        $('.sdasdas').hover(
+          function () {
+            $(this).animate({
+              paddingLeft: '+20px', opacity: 'show'
+            }, 500);
+          },
+          function () {
+            $(this).animate({
+              paddingLeft: '0px', opacity: 'show'
+            }, 500);
+          }
+        )
+
+      </script>
 </body>
 
 </html>
