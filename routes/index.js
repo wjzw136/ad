@@ -15,7 +15,9 @@ router.get('/main', function(req, res, next) {
   res.render('main', { title: 'sdsd' });
 });
 router.get('/news',function(req,res,next){
-  res.render('main',{title:'new'})
+
+  data
+  res.render('main',{data:data})
 })
 router.get('/cp',function(req,res,next){
   res.render('main',{title:'new'})
