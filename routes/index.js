@@ -24,7 +24,8 @@ router.get("/news", function(req, res, next) {
       return JSON.parse(data).jianjie;
     }
   });
-  res.render("moban", {data:data1});
+  res.locals=data1;
+  res.render("moban");
 });
 router.get("/cp", function(req, res, next) {
   res.render("main", { title: "new" });
