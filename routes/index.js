@@ -37,5 +37,12 @@ router.get("/fa", function(req, res, next) {
 router.get("/lx", function(req, res, next) {
   res.render("main", { title: "new" });
 });
+router.get("/404", function(req, res, next) {
+  res.render("404", { title: "new" });
+});
+router.get("/404", function(req, res, next) {
+  res.render("404", { title: "new" });
+});
+
 
 module.exports = router;

@@ -40,6 +40,9 @@ li {
 .nav-pills li a{
   color: #fff;
 }
+.nav-pills li a:hover{
+  color: black
+}
 
 #css1 li a {
   padding: 0px;
