@@ -37,6 +37,9 @@ li {
   overflow: hidden;
   transition: inherit;
 }
+.nav-pills li a{
+  color: #fff;
+}
 
 #css1 li a {
   padding: 0px;
@@ -105,7 +108,7 @@ body {
 .foo{
   padding: 20px 10%;
   background-image: url(/images/newxitong_18.jpg);
-  color: #fff
+  color: #B7BCC0
 
 }
 .main{

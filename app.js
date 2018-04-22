@@ -22,7 +22,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req,res,next){
-  console.log('访问者IP:'+req.ip+'，网址为：'+req.hostname+",时间:"+func.getNowFormatDate());
+  if (req.cookies.aa) {
+    console.log('已记录');
+  } else {
+    res.cookie('aa','tongxing')
+    console.log('访问者IP:'+req.ip+'，网址为：'+req.hostname+",时间:"+func.getNowFormatDate());
+  }
+
   next();
 })
 app.use('/', index);

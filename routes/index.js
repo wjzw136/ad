@@ -4,12 +4,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  res.render("index", { title: "Express" });
+  res.render("2", { title: "Express" });
 });
 router.get("/1", function(req, res, next) {
   res.render("index1", { title: "sdsd" });
 });
-router.get("/2", function(req, res, next) {
+router.get("/index", function(req, res, next) {
+
   res.render("2", { title: "sdsd" });
 });
 router.get("/main", function(req, res, next) {
@@ -28,7 +29,7 @@ router.get("/news", function(req, res, next) {
   res.render("moban", { htmldata: JSON.parse(dataa) });
 });
 router.get("/cp", function(req, res, next) {
-  res.render("main", { title: "new" });
+  res.render("cp", { title: "new" });
 });
 router.get("/fa", function(req, res, next) {
   res.render("main", { title: "new" });
