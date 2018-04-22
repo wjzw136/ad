@@ -16,16 +16,16 @@ router.get("/main", function(req, res, next) {
   res.render("main", { title: "sdsd" });
 });
 router.get("/news", function(req, res, next) {
- var data1= fs.readFile("./con.json", 'utf-8',function(err, data) {
+  var dataa = fs.readFileSync("./xx.json", "utf-8", function(err, data) {
     if (err) {
       console.error(err);
     } else {
-      //console.log(JSON.parse(data).jianjie);
-      return JSON.parse(data).jianjie;
+      console.log(data);
+      return data;
+      //console.log(JSON.parse(data));
     }
   });
-  res.locals=data1;
-  res.render("moban");
+  res.render("moban", { htmldata: JSON.parse(dataa) });
 });
 router.get("/cp", function(req, res, next) {
   res.render("main", { title: "new" });
