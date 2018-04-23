@@ -29,7 +29,9 @@
                     <%-include ./liuyan.html %>
                 </div>
                 <div class="col-xs-9 cpbox">
-
+                    <div class="row col-xs-4"><img src="/images/b1.jpg" alt=""></div>
+                    <div class="row col-xs-4"><img src="/images/b2.jpg" alt=""></div>
+                    <div class="row col-xs-4"><img src="/images/b3.jpg" alt=""></div>
                 </div>
             </div>
         </div>
@@ -37,21 +39,17 @@
 </body>
 <script>
     $("#cplist a").click(function () {
-        alert('sdsd');
-        alert($(this).attr('data-dzt'));
-        $(".cpbox").load("sdsa.html");
-        // if ($(this).attr('data-dzt')!="") {
-        //     alert((this).attr('data-dzt'+"sdsadasd"))
-        //     $('#cpbox').load('./wt.html');
-        // }else if($(this).attr('data-jzt')){
-        //     $('#cpbox').load('./jzt.html');
-        // }else if($(this).attr('data-cz')) {
-        //     $('#cpbox').load('./cz.html');
-        // }else if($(this).attr('data-xkz')) {
-        //     $('#cpbox').load('./xkz.html');
-        // }else if($(this).attr('data-sbd')) {
-        //     $('#cpbox').load('./sbd.html');
-        // }
+        if ($(this).attr('data-dzt')) {
+            $(".cpbox").load("/html/dzt.html");
+        }else if($(this).attr('data-jzt')){
+            $('.cpbox').load('/html/jzt.html');
+        }else if($(this).attr('data-cz')) {
+            $('.cpbox').load('/html/cz.html');
+        }else if($(this).attr('data-xkz')) {
+            $('.cpbox').load('/html/xkz.html');
+        }else if($(this).attr('data-sbd')) {
+            $('.cpbox').load('/html/sbd.html');
+        }
     })
 </script>
 
