@@ -43,6 +43,19 @@ router.get("/404", function(req, res, next) {
 router.get("/404", function(req, res, next) {
   res.render("404", { title: "new" });
 });
+router.get("/xiexie", function(req, res, next) {
+  res.render("index", { title: "new" });
+
+});
+//留言
+router.post("/liuyan", function(req, res, next) {
+ // let email=req.body.email;
+  //let dianhua=req.bady.dianhua;
+  //let neirong =req.body.neirong;
+  //console.log(email+dianhua+neirong)
+  console.log(req.body.email)
+  res.redirect('/xiexie');
+});
 
 
 module.exports = router;
