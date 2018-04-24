@@ -6,9 +6,6 @@ var router = express.Router();
 router.get("/", function(req, res, next) {
   res.render("2", { title: "Express" });
 });
-router.get("/1", function(req, res, next) {
-  res.render("index1", { title: "sdsd" });
-});
 router.get("/index", function(req, res, next) {
 
   res.render("2", { title: "sdsd" });
@@ -32,21 +29,13 @@ router.get("/cp", function(req, res, next) {
   res.render("cp", { title: "new" });
 });
 router.get("/fa", function(req, res, next) {
-  res.render("main", { title: "new" });
+  res.render("xiexie", { main: "还没写，请等待。。。。"  });
 });
 router.get("/lx", function(req, res, next) {
-  res.render("main", { title: "new" });
+  res.render("xiexie", { main: "还没写，请等待。。。。"  });
 });
-router.get("/404", function(req, res, next) {
-  res.render("404", { title: "new" });
-});
-router.get("/404", function(req, res, next) {
-  res.render("404", { title: "new" });
-});
-router.get("/xiexie", function(req, res, next) {
-  res.render("index", { title: "new" });
 
-});
+
 //留言
 router.post("/liuyan", function(req, res, next) {
  // let email=req.body.email;
@@ -54,8 +43,6 @@ router.post("/liuyan", function(req, res, next) {
   //let neirong =req.body.neirong;
   //console.log(email+dianhua+neirong)
   console.log(req.body.email)
-  res.redirect('/xiexie');
+  res.render("xiexie", { main: "谢谢您提出宝贵意见！" });
 });
-
-
 module.exports = router;

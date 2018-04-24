@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= main %>
+    </title>
+    <%-include ../public/html/css.html %>
+        <style>
+           #xxssas {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 0px 10%;
+
+            }
+        </style>
+</head>
+
+<body id="xxbody">
+    <div id="xxssas">
+
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title">提示</h4>
+                        </div>
+                        <div class="modal-body">
+                                <div><%= main %></div>
+                        </div>
+                        <div class="modal-footer">
+                          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+
+    </div>
+
+</body>
+<script>
+    window.onload = function () {
+        document.getElementById("xxssas").style.height=window.innerHeight+"px";
+        setTimeout(function () {
+            history.back();
+        }, 3000)
+    }
+</script>
+
+</html>

@@ -117,3 +117,11 @@ body {
 .main{
   padding: 10px 10%;
 }
+#cplist li{
+  cursor: pointer;
+}
+#cp-list li>span{
+  margin: 20px 0px;
+  background-color: chartreuse;
+  height: 30px;
+}
