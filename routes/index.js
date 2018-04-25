@@ -29,7 +29,7 @@ router.get("/cp", function(req, res, next) {
   res.render("cp", { title: "new" });
 });
 router.get("/fa", function(req, res, next) {
-  res.render("xiexie", { main: "还没写，请等待。。。。" });
+  res.render("fa", { main: "还没写，请等待。。。。" });
 });
 router.get("/lx", function(req, res, next) {
   res.render("xiexie", { main: "还没写，请等待。。。。" });

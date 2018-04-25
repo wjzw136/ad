@@ -1,14 +1,10 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: red
+  font: 14px Arial;
 }
 p{
   text-indent:2em
 }
-a {
-  color: red;
-}
+
 a:link {
 
 }
@@ -120,6 +116,14 @@ body {
 #cplist li{
   cursor: pointer;
 }
+#cplist li:hover{
+  color: red;
+}
+
+.colorred{
+  color:red;
+}
+
 #cp-list li>span{
   margin: 20px 0px;
   background-color: chartreuse;

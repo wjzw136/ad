@@ -8,50 +8,102 @@
 
 <body id="body">
 
-        <%-include ./header.html %>
-  <!-- 底图开始 start -->
-  <div id="ditu">
-    <div id="img">
-      <div id="img01">
-        <img width="100%" height="100%" src="/images/b1.jpg">
-      </div>
-      <div id="img02">
-        <img width="100%" height="100%" src="/images/b2.jpg">
-      </div>
-      <div id="img03">
-        <img width="100%" height="100%" src="/images/b3.jpg">
-      </div>
-      <div id="img04">
-        <img width="100%" height="100%" src="/images/b4.jpg">
-      </div>
-    </div>
-    <div style="
-    height: 80px; line-height: 80px; z-index:100;margin-top:-80px;position: absolute;width: 100%;font-size: 16px">
-      <div class="row" style="color: #fff">
-        <div class="col-xs-6">
-          <p>专注于卫星通信产品开发、制造、销售和完整解决方案服务的科技企业</p>
-        </div>
-        <div class="col-xs-6">
-          <div id="yd">
-            <span id="yd1">●</span>
-            <span id="yd2">●</span>
-            <span id="yd3">●</span>
-            <span id="yd4">●</span>
+  <%-include ./header.html %>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="/images/b1.jpg" alt="..." width="100%">
+          <div class="carousel-caption">
+              <h3>专注于卫星通信产品开发、制造、销售和完整解决方案服务的科技企业</h3>
+              <p>通信技术领域高端技术研发与产业化基地</p>
           </div>
-
+        </div>
+        <div class="item">
+          <img src="/images/b2.jpg" alt="..."width="100%">
+          <div class="carousel-caption">
+              <h3>专注于卫星通信产品开发、制造、销售和完整解决方案服务的科技企业</h3>
+              <p>通信技术领域高端技术研发与产业化基地</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/images/b3.jpg" alt="..."width="100%">
+          <div class="carousel-caption">
+              <h3>专注于卫星通信产品开发、制造、销售和完整解决方案服务的科技企业</h3>
+              <p>通信技术领域高端技术研发与产业化基地</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/images/b4.jpg" alt="..."width="100%">
+          <div class="carousel-caption">
+              <h3>专注于卫星通信产品开发、制造、销售和完整解决方案服务的科技企业</h3>
+              <p>通信技术领域高端技术研发与产业化基地</p>
+          </div>
         </div>
       </div>
 
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
+    <!-- 底图开始 start -->
+    <!-- <div id="ditu">
+      <div id="img">
+        <div id="img01">
+          <img width="100%" width="100%" src="/images/b1.jpg">
+        </div>
+        <div id="img02">
+          <img width="100%" width="100%" src="/images/b2.jpg">
+        </div>
+        <div id="img03">
+          <img width="100%" width="100%" src="/images/b3.jpg">
+        </div>
+        <div id="img04">
+          <img width="100%" width="100%" src="/images/b4.jpg">
+        </div>
+      </div>
+      <div style="
+    height: 80px; line-height: 80px; z-index:100;margin-top:-80px;position: absolute;width: 100%;font-size: 16px">
+        <div class="row" style="color: #fff">
+          <div class="col-xs-6">
+            <p>专注于卫星通信产品开发、制造、销售和完整解决方案服务的科技企业</p>
+          </div>
+          <div class="col-xs-6">
+            <div id="yd">
+              <span id="yd1">●</span>
+              <span id="yd2">●</span>
+              <span id="yd3">●</span>
+              <span id="yd4">●</span>
+            </div>
 
-  </div>
-  <!-- 底图结束 end-->
-  <!-- 导航 start-->
+          </div>
+        </div>
 
-  <div class="row">
-    <div class="col-xs-12 bjcolor">
-      <div class="row">
-        <div class="col-xs-6">
+      </div>
+
+    </div> -->
+    <!-- 底图结束 end-->
+    <!-- 导航 start-->
+
+    <div class="row">
+      <div class="col-xs-12 bjcolor">
+        <div class="row">
+          <div class="col-xs-6">
             <h3>公安卫星通信解决方案</h3>
             <p style="white-space:normal;text-indent:2em;">
               <span style="text-indent:-0.31in;">窄带以语音为主，宽带以数据为主；</span>
@@ -62,142 +114,143 @@
             <p style="text-indent:2em;">
               <span style="text-indent:-0.31in;">宽带和窄带集群系统产品融合形成立体、可靠、实时、直观等指挥调度通信网络。</span>
             </p>
-          <div style="display:flex;align-items:center">
-            <img src="/images/a.jpg" alt="" width="100%">
+            <div style="display:flex;align-items:center">
+              <img src="/images/a.jpg" alt="" width="100%">
+            </div>
           </div>
-        </div>
-        <div class="col-xs-6">
-          <div class="sdasdas">
-            <h4>典型应用场景：</h4>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>1</span>）高清视频回传：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:0cm;"> 在日常应用中以及应对紧急事件时，可以通过通信卫星实时将现场高清图像实时传送到各级指挥中心，工作人员可随时检索回放任一摄像头的监控图像，便于应急事件处理。</span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>2</span>）基站回传中继链路备份：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:21pt;"> 当地面光纤中断时，基站的传输通道切换到宽带卫星链路，保障基站与核心网之间链路通畅，指挥调度终端正常使用，应急救援感知不到光纤链路故障。</span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span></span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span> </span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>3</span>） 移动集群基站：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              卫星通信车到达应急区域，可以快速建立集群网络，集群基站通过车载卫通天线建立的卫星链路与省级指挥中心的核心网连接，公安人员可在移动集群基站网络内进行通话及数据传输，实现应急通信网络的快速、机动部署。
-            </p>
+          <div class="col-xs-6">
+            <div class="sdasdas">
+              <h4>典型应用场景：</h4>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>1</span>）高清视频回传：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:0cm;"> 在日常应用中以及应对紧急事件时，可以通过通信卫星实时将现场高清图像实时传送到各级指挥中心，工作人员可随时检索回放任一摄像头的监控图像，便于应急事件处理。</span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>2</span>）基站回传中继链路备份：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:21pt;"> 当地面光纤中断时，基站的传输通道切换到宽带卫星链路，保障基站与核心网之间链路通畅，指挥调度终端正常使用，应急救援感知不到光纤链路故障。</span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span></span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span> </span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>3</span>） 移动集群基站：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                卫星通信车到达应急区域，可以快速建立集群网络，集群基站通过车载卫通天线建立的卫星链路与省级指挥中心的核心网连接，公安人员可在移动集群基站网络内进行通话及数据传输，实现应急通信网络的快速、机动部署。
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-xs-12 bjcolor">
-      <div class="row">
-        <div class="col-xs-6">
+      <div class="col-xs-12 bjcolor">
+        <div class="row">
+          <div class="col-xs-6">
             <h3>海洋卫星通信解决方案 </h3>
-          <div style="display:flex;align-items:center;">
+            <div style="display:flex;align-items:center;">
 
-            <img src="/images/b.jpg" alt="" width="100%" align="middle">
+              <img src="/images/b.jpg" alt="" width="100%" align="middle">
+            </div>
           </div>
-        </div>
-        <div class="col-xs-6">
-          <div class="sdasdas">
+          <div class="col-xs-6">
+            <div class="sdasdas">
 
-            <h4>典型应用场景：</h4>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>1</span>）高清视频回传：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:0cm;"> 武警、海警、海监、渔政等公务执法船通过无覆盖盲区、支持宽带音视频通信业务通过卫星通信网络回传，实现全海域、全方位的政府监管、抢险救援及公务执法。</span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>2</span>）支持渔业生产、通信:
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:21pt;"> 渔民出海后的日常通信需求，能够解决日常通信、遇险呼救、定位跟踪，保护渔民生命财产安全。</span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span></span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span> </span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>3</span>） 远洋办公:
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              远洋运输船在整个航行过程中的企业办公、数据传输、船体状态跟踪、定位导航等船务管理。
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>4</span>） 邮轮游艇WIFI接入:
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              充分利用卫星共享带宽，为乘客提供全程流畅的互联网接入服务，并可建立智能商业WIFI云平台，实现流量统计，定向广告浏览等功能，为开展流量后向服务运营提供数据基础。
-            </p>
+              <h4>典型应用场景：</h4>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>1</span>）高清视频回传：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:0cm;"> 武警、海警、海监、渔政等公务执法船通过无覆盖盲区、支持宽带音视频通信业务通过卫星通信网络回传，实现全海域、全方位的政府监管、抢险救援及公务执法。</span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>2</span>）支持渔业生产、通信:
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:21pt;"> 渔民出海后的日常通信需求，能够解决日常通信、遇险呼救、定位跟踪，保护渔民生命财产安全。</span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span></span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span> </span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>3</span>） 远洋办公:
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                远洋运输船在整个航行过程中的企业办公、数据传输、船体状态跟踪、定位导航等船务管理。
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>4</span>） 邮轮游艇WIFI接入:
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                充分利用卫星共享带宽，为乘客提供全程流畅的互联网接入服务，并可建立智能商业WIFI云平台，实现流量统计，定向广告浏览等功能，为开展流量后向服务运营提供数据基础。
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-xs-12 bjcolor">
-      <div class="row">
-        <div class="col-xs-6">
+      <div class="col-xs-12 bjcolor">
+        <div class="row">
+          <div class="col-xs-6">
             <h3>林业卫星通信解决方案 </h3>
 
-          <div style="display:flex;align-items:center">
-            <img src="/images/c.jpg" alt="" width="100%">
+            <div style="display:flex;align-items:center">
+              <img src="/images/c.jpg" alt="" width="100%">
+            </div>
           </div>
-        </div>
-        <div class="col-xs-6">
-          <div class="sdasdas">
+          <div class="col-xs-6">
+            <div class="sdasdas">
 
-            <h4>典型应用场景：</h4>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>1</span>）实时预警与告警：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:0cm;"> 实现对林业防火、防盗信息的上报，告警消息至平台后，指挥调度监控中心即可发起声光告警，做到“早发现、早处理”，保障林业资源和国家财产。 </span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>2</span>）现场实时救援：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:21pt;"> 通过应急通信车与指挥中心的高清音视频双向互动，可第一时间处理险情，通过多种方式（单兵地面拍摄、直升机空中拍摄）将打火现场的图像、视频回传到指挥中心，进行现场指挥与调度。 </span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span></span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span> </span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>3</span>） 全方位监控：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              通过集卫星网络、公网和林业专网系统及全面的多功能物联网传感器系统为一体的立体网络，可巡航监控，烟火识别，及时预防森林火灾的发生；对木材运输车辆进行监控，有效发现及跟踪违规车辆；对疫木加工厂进行监控，有效防止疫木非法运输。
-            </p>
+              <h4>典型应用场景：</h4>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>1</span>）实时预警与告警：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:0cm;"> 实现对林业防火、防盗信息的上报，告警消息至平台后，指挥调度监控中心即可发起声光告警，做到“早发现、早处理”，保障林业资源和国家财产。 </span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>2</span>）现场实时救援：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:21pt;"> 通过应急通信车与指挥中心的高清音视频双向互动，可第一时间处理险情，通过多种方式（单兵地面拍摄、直升机空中拍摄）将打火现场的图像、视频回传到指挥中心，进行现场指挥与调度。 </span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span></span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span> </span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>3</span>） 全方位监控：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                通过集卫星网络、公网和林业专网系统及全面的多功能物联网传感器系统为一体的立体网络，可巡航监控，烟火识别，及时预防森林火灾的发生；对木材运输车辆进行监控，有效发现及跟踪违规车辆；对疫木加工厂进行监控，有效防止疫木非法运输。
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-xs-12 bjcolor">
-      <div class="row">
-        <div class="col-xs-6">
+      <div class="col-xs-12 bjcolor">
+        <div class="row">
+          <div class="col-xs-6">
             <h3>应急卫星通信解决方案 </h3>
             <p style="white-space:normal;text-indent:2em;">
-              <span style="text-indent:-0.31in;">当突发事件发生时，需要在前方现场快速搭建语音、视频指挥调度平台或数据传输平台，为现场处置人员提供通信支持，也可用于在现场快速搭建临时指挥部，将现场画面回传指挥中心，上级领导坐镇指挥中心进行远程指挥。根据事态发展，可建立上级指挥中心、现场临时指挥中心和前方处置人员之间的三方互通，实现了指挥中心对前方处置人员的点对点指挥。 </span>
+              <span style="text-indent:-0.31in;">当突发事件发生时，需要在前方现场快速搭建语音、视频指挥调度平台或数据传输平台，为现场处置人员提供通信支持，也可用于在现场快速搭建临时指挥部，将现场画面回传指挥中心，上级领导坐镇指挥中心进行远程指挥。根据事态发展，可建立上级指挥中心、现场临时指挥中心和前方处置人员之间的三方互通，实现了指挥中心对前方处置人员的点对点指挥。
+                </span>
             </p>
             <p style="text-indent:2em;">
               <span style="text-indent:-0.31in;"></span>
@@ -205,173 +258,179 @@
             <p style="text-indent:2em;">
               <span style="text-indent:-0.31in;"></span>
             </p>
-          <div style="display:flex;align-items:center;">
-            <img src="/images/d.jpg" alt="" width="100%">
+            <div style="display:flex;align-items:center;">
+              <img src="/images/d.jpg" alt="" width="100%">
+            </div>
           </div>
-        </div>
-        <div class="col-xs-6">
-          <div class="sdasdas">
+          <div class="col-xs-6">
+            <div class="sdasdas">
 
-            <h4>典型应用场景：</h4>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>1</span>）在突发事件响应和现场处置中，在事件现场组建临时指挥部，为事件现场处置人员之间与临时指挥部之间体统语音、视频、数据等指挥和情况上报手段；
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:0cm;"> </span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>2</span>）前方采集的现场图像、视频可实时回传现场指挥部，为现场指挥提供支持，根据需要，也可将现场情况会还至后方指挥中心；
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:21pt;"> </span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span></span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span> </span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>3</span>） 当突发事件的区域有集群或常规无线专网覆盖时，现场应急指挥车可通过已有网络进行通信传输，并将卫星传输作为备份链路，保障在任何情况下都可正常通信；
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
+              <h4>典型应用场景：</h4>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>1</span>）在突发事件响应和现场处置中，在事件现场组建临时指挥部，为事件现场处置人员之间与临时指挥部之间体统语音、视频、数据等指挥和情况上报手段；
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:0cm;"> </span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>2</span>）前方采集的现场图像、视频可实时回传现场指挥部，为现场指挥提供支持，根据需要，也可将现场情况会还至后方指挥中心；
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:21pt;"> </span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span></span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span> </span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>3</span>） 当突发事件的区域有集群或常规无线专网覆盖时，现场应急指挥车可通过已有网络进行通信传输，并将卫星传输作为备份链路，保障在任何情况下都可正常通信；
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
 
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>4</span>） 当突发事件的区域没有集群或常规无线专网覆盖时，或者已有网络遭到破坏时，卫星应急通信网络系统可快速搭建，通过卫星通信手段实现现场、现场指挥中心与后方指挥中心之间的互联互通；
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>4</span>） 当突发事件的区域没有集群或常规无线专网覆盖时，或者已有网络遭到破坏时，卫星应急通信网络系统可快速搭建，通过卫星通信手段实现现场、现场指挥中心与后方指挥中心之间的互联互通；
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
 
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>5</span>） 对于大型或特大型突发事件处置，由于参与救援的人员属于不同部门，通信手段可能会有不同，采用应急卫星通信解决方案，可支持不同网络制式的同时接入，由现场指挥部统一调度，增强各部门之间的有效互通，提高突发事件的处置效率。
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>5</span>） 对于大型或特大型突发事件处置，由于参与救援的人员属于不同部门，通信手段可能会有不同，采用应急卫星通信解决方案，可支持不同网络制式的同时接入，由现场指挥部统一调度，增强各部门之间的有效互通，提高突发事件的处置效率。
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
 
-            </p>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-xs-12 bjcolor">
-      <div class="row">
-        <div class="col-xs-6">
+      <div class="col-xs-12 bjcolor">
+        <div class="row">
+          <div class="col-xs-6">
             <h3>水利卫星通信解决方案 </h3>
 
-          <div style="display:flex;align-items:center">
-            <img src="/images/f.jpg" alt="" width="100%">
+            <div style="display:flex;align-items:center">
+              <img src="/images/f.jpg" alt="" width="100%">
+            </div>
           </div>
-        </div>
-        <div class="col-xs-6">
-          <div class="sdasdas">
+          <div class="col-xs-6">
+            <div class="sdasdas">
 
-            <h4>典型应用场景：</h4>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>1</span>）实时预警与告警：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:0cm;"> 实现对水利抗洪抢险的信息上报，告警消息至平台后，指挥调度监控中心即可发起声光告警，做到“早发现、早处理”，保障水利资源和国家人民财产安全。 </span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>2</span>）现场实时救灾：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span style="text-indent:21pt;"> 通过应急通信车与调度中心的高清音视频双向互动，可第一时间处理险情，通过多种方式（单兵地面拍摄、直升机空中拍摄）将抢险救灾现场的图像、视频回传到调度中心，进行现场指挥与调度。</span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span></span>
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span> </span>
-            </p>
-            <hr/>
-            <p class="MsoNormal" style="text-indent:2em;">
-              <span>3</span>） 全方位监控：
-            </p>
-            <p class="MsoNormal" style="text-indent:2em;">
-              通过集卫星网络、公网和专网系统及全面的多功能物联网传感器系统为一体的立体网络，可巡航监控，水位识别，及时预防洪涝灾害的发生。
-            </p>
+              <h4>典型应用场景：</h4>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>1</span>）实时预警与告警：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:0cm;"> 实现对水利抗洪抢险的信息上报，告警消息至平台后，指挥调度监控中心即可发起声光告警，做到“早发现、早处理”，保障水利资源和国家人民财产安全。 </span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>2</span>）现场实时救灾：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span style="text-indent:21pt;"> 通过应急通信车与调度中心的高清音视频双向互动，可第一时间处理险情，通过多种方式（单兵地面拍摄、直升机空中拍摄）将抢险救灾现场的图像、视频回传到调度中心，进行现场指挥与调度。</span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span></span>
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span> </span>
+              </p>
+              <hr/>
+              <p class="MsoNormal" style="text-indent:2em;">
+                <span>3</span>） 全方位监控：
+              </p>
+              <p class="MsoNormal" style="text-indent:2em;">
+                通过集卫星网络、公网和专网系统及全面的多功能物联网传感器系统为一体的立体网络，可巡航监控，水位识别，及时预防洪涝灾害的发生。
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+
     </div>
 
+    <%-include ./foo.html %>
 
-  </div>
-
-  <%-include ./foo.html %>
-
-    <!-- 导航  end -->
+      <!-- 导航  end -->
 
 
 
 
-    <%-include ../public/html/js.html %>
-      <script type="text/javascript">
-        var i = 1;
-        function bjqh() {
-          var aaa = setInterval(function () {
-            $("#ditu").css("background-image", "url(/images/newxitong_" + i + ".jpg)");
-            i = ++i;
-            if (i > 4) {
-              i = 1;
-            }
-          }, 3000);
-        }
-        //bjqh();
-        function bjqh1() {
-          var aaa = setInterval(function () {
-            $("#ditu #img div").hide();
-            $('#img0' + i).show();
-            $('#yd span').css('color', '#fff');
-            $('#yd' + i).css({ 'color': 'green' });
-            i = ++i;
-            if (i > 4) {
-              i = 1;
-            }
-
-          }, 3000);
-        }
-        bjqh1();
-        function imgurl() {
-          $('#dutu img').attr({ 'src': "" })
-        }
-        imgurl();
-        function getcolor() {
-          let y=['#265290','#755091','#549998',"#666480",'#336699',"#009966","#663300"];
-          let n=Math.floor((Math.random()*y.length));
-          let sd=y[n];
-          //y.slice(y.indexOf(sd),1);
-          //var x = '#' + Math.round(Math.random() * 1000000);
-          return sd;
-        }
-        $('.bjcolor').each(function () {
-          $(this).css({ 'background-color': getcolor() })
-        })
-        // function yidong(x, y) {
-        //   $('.' + x).animate({
-        //     marginLeft: y + 'px', opacity: 'show'
-        //   }, 500);
-        // }
-        $('.sdasdas').hover(
-          function () {
-            $(this).animate({
-              paddingLeft: '+20px', opacity: 'show'
-            }, 500);
-          },
-          function () {
-            $(this).animate({
-              paddingLeft: '0px', opacity: 'show'
-            }, 500);
+      <%-include ../public/html/js.html %>
+        <script type="text/javascript">
+          var i = 1;
+          function bjqh() {
+            var aaa = setInterval(function () {
+              $("#ditu").css("background-image", "url(/images/newxitong_" + i + ".jpg)");
+              i = ++i;
+              if (i > 4) {
+                i = 1;
+              }
+            }, 3000);
           }
-        )
+          //bjqh();
+          function bjqh1() {
+            var aaa = setInterval(function () {
+              $("#ditu #img div").hide();
+              $('#img0' + i).show();
+              $('#yd span').css('color', '#fff');
+              $('#yd' + i).css({ 'color': 'green' });
+              i = ++i;
+              if (i > 4) {
+                i = 1;
+              }
 
-      </script>
+            }, 3000);
+          }
+          bjqh1();
+          function imgurl() {
+            $('#dutu img').attr({ 'src': "" })
+          }
+          imgurl();
+          function getcolor() {
+            let y = ['#265290', '#755091', '#549998', "#666480", '#336699', "#009966", "#663300"];
+            let n = Math.floor((Math.random() * y.length));
+            let sd = y[n];
+            //y.slice(y.indexOf(sd),1);
+            //var x = '#' + Math.round(Math.random() * 1000000);
+            return sd;
+          }
+          $('.bjcolor').each(function () {
+            $(this).css({ 'background-color': getcolor() })
+          })
+          // function yidong(x, y) {
+          //   $('.' + x).animate({
+          //     marginLeft: y + 'px', opacity: 'show'
+          //   }, 500);
+          // }
+          $('.sdasdas').hover(
+            function () {
+              $(this).animate({
+                paddingLeft: '+20px', opacity: 'show'
+              }, 500);
+            },
+            function () {
+              $(this).animate({
+                paddingLeft: '0px', opacity: 'show'
+              }, 500);
+            }
+          )
+
+
+
+          $('.carousel').carousel({
+            interval: 3000,
+            pause:'null'
+          })
+        </script>
 </body>
 
 </html>
