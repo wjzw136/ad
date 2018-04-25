@@ -1,0 +1,41 @@
+CREATE DATABASE W3CSCHOOL//创建数据库
+
+CREATE TABLE table_name (column_name column_type);//创建数据表
+//例子
+tutorials_tbl(
+   tutorial_id INT NOT NULL AUTO_INCREMENT,
+   tutorial_title VARCHAR(100) NOT NULL,
+   tutorial_author VARCHAR(40) NOT NULL,
+   submission_date DATE,
+   PRIMARY KEY ( w3cschool_id )
+);
+
+//插入数据
+INSERT INTO table_name ( field1, field2,...fieldN )VALUES( value1, value2,...valueN );
+
+//MySQL 查询数据
+SELECT column_name,column_name
+FROM table_name
+[WHERE Clause]
+[OFFSET M ][LIMIT N]
+
+//MySQL where
+
+SELECT field1, field2,...fieldN FROM table_name1, table_name2...
+[WHERE condition1 [AND [OR]] condition2.....
+//MySQL UPDATE 查询,果我们需要修改或更新MySQL中的数据，我们可以使用 SQL UPDATE 命令来操作。
+UPDATE table_name SET field1=new-value1, field2=new-value2
+[WHERE Clause]
+
+//MySQL DELETE 语句
+DELETE FROM table_name [WHERE Clause]
+
+//MySQL LIKE 子句
+SELECT field1, field2,...fieldN
+FROM table_name1, table_name2...
+WHERE field1 LIKE condition1 [AND [OR]] filed2 = 'somevalue'
+//MySQL 排序
+SELECT field1, field2,...fieldN FROM table_name1, table_name2...
+ORDER BY field1, [field2...] [ASC [DESC]]
+
+SELECT a.w3cschool_id, a.w3cschool_author, b.w3cschool_count FROM w3cschool_tbl a, tcount_tbl b WHERE a.w3cschool_author = b.w3cschool_author;
