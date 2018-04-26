@@ -1,6 +1,7 @@
 var express = require("express");
 var fs = require("fs");
-var mysql = require("mysql");
+//var mysql = require("mysql");
+var select =require('../sql/select')
 var router = express.Router();
 
 /* GET home page. */
@@ -48,28 +49,37 @@ router.post("/liuyan", function(req, res, next) {
 router.get("/login1", function(req, res, next) {
   var zhanghao = "ts123"; //req.query.zhanghao;
   let password = req.query.password;
-  var connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "tonesat"
-  });
-  connection.connect();
-  connection.query(
-    "SELECT * FROM yuangong WHERE zhanghao=" + connection.escape(zhanghao),
-    function(err, rows, fields) {
-      if (err) throw err;
-      console.log(rows[0].name);
-      if (rows[0].mima == password) {
-        res.cookie("user", req.query.user);
-        res.cookie("password", req.query.password);
-        res.render("index", {main:"ssss"});
-      } else {
-        res.render("xiexie",{main:"sdsdsd"});
-      }
-    }
-  );
-  connection.end();
+  // var connection = mysql.createConnection({
+  //   host: "localhost",
+  //   user: "root",
+  //   password: "",
+  //   database: "tonesat"
+  // });
+  // connection.connect();
+  // var connect=select.getconnect();
+  // connect.query('SELECT * FROM yuangong',function(err, rows, fields) {
+  //   if (err) throw err;
+  //     console.log(rows);
+  // })
+  // connect.end()
+  select.getallyuangong();
+  console.log(sdsd);
+  // connection.query(
+  //   "SELECT * FROM yuangong WHERE zhanghao=" + connection.escape(zhanghao),
+  //   function(err, rows, fields) {
+  //     if (err) throw err;
+  //     console.log(rows[0].name);
+  //     if (rows[0].mima == password) {
+  //       res.cookie("user", req.query.user);
+  //       res.cookie("password", req.query.password);
+  //       res.render("index", {main:"ssss"});
+  //     } else {
+       res.render("xiexie",{main:"sdsdsd"});
+  //     }
+  //   }
+  // );
+  //connection.end();
+
   //console.log(row);
 });
 module.exports = router;

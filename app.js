@@ -4,11 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mysql=require('mysql');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var func=require('./func');
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +25,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req,res,next){
   if (req.cookies.aa) {
     console.log('已记录');
+    // var connection = mysql.createConnection({
+    //   host: "localhost",
+    //   user: "root",
+    //   password: "",
+    //   database: "tonesat"
+    // });
+    // let sql ="SELECT * FROM yuangong WHERE zhanghao='ts123'";
+    // connection.connect()
+    // connection.query(sql,function(err,rows,fields){
+    //   if (err) throw err;
+    //   console.log(rows[0].name);
+    // })
+    // connection.end();
   } else {
     res.cookie('aa','tongxing')
     console.log('访问者IP:'+req.ip+'，网址为：'+req.hostname+",时间:"+func.getNowFormatDate());

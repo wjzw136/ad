@@ -11,6 +11,11 @@ router.get('/login', function(req, res, next) {
 router.get('/1', function(req, res, next) {
   res.render("admin/1", { main: "还没写，请等待。。。。"  });
 });
-
+router.get('/index', function(req, res, next) {
+  res.render("admin/index", { main: "还没写，请等待。。。。"  });
+});
+router.get('/home', function(req, res, next) {
+  res.render("admin/home", { main: "还没写，请等待。。。。"  });
+});
 
 module.exports = router;
