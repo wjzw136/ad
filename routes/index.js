@@ -56,14 +56,15 @@ router.get("/login1", function(req, res, next) {
   //   database: "tonesat"
   // });
   // connection.connect();
-  // var connect=select.getconnect();
-  // connect.query('SELECT * FROM yuangong',function(err, rows, fields) {
-  //   if (err) throw err;
-  //     console.log(rows);
-  // })
-  // connect.end()
-  select.getallyuangong();
-  console.log(sdsd);
+  var connect=select.getconnect();
+  connect.query('SELECT * FROM yuangong WHERE zhanghao=?',['ts123'],function(err, rows, fields) {
+    if (err) throw err;
+      console.log(rows);
+      res.render("xiexie",{main:rows});
+  })
+  connect.end()
+  // select.getallyuangong();
+  // console.log(sdsd);
   // connection.query(
   //   "SELECT * FROM yuangong WHERE zhanghao=" + connection.escape(zhanghao),
   //   function(err, rows, fields) {
@@ -74,7 +75,7 @@ router.get("/login1", function(req, res, next) {
   //       res.cookie("password", req.query.password);
   //       res.render("index", {main:"ssss"});
   //     } else {
-       res.render("xiexie",{main:"sdsdsd"});
+  //     res.render("xiexie",{main:"sdsdsd"});
   //     }
   //   }
   // );
