@@ -7,32 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>后台管理</title>
     <%-include ../../public/html/css.html %>
-    <style>
-        .leftbox li{
-            background-color: bisque;
-            padding: 5px 0px;
-            border-bottom: aqua 1px solid;
-            text-align: center
+        <style>
+            .html,
+            body {
+                overflow-x: hidden;
+            }
 
-        }
-        .leftbox ul{
-            padding: 0;
-            margin: 0
-        }
-        .leftbox li:last-child{
-            border:0
-        }
-        iframe{
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        }
-    </style>
+            .leftbox li {
+                background-color: bisque;
+                padding: 5px 0px;
+                border-bottom: aqua 1px solid;
+                text-align: center
+            }
+
+            .leftbox ul {
+                padding: 0;
+                margin: 0
+            }
+
+            .leftbox li:last-child {
+                border: 0
+            }
+
+            iframe {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+        </style>
 </head>
 
 <body>
-    <div>后台管理</div>
-    <div class="row" style="padding: 0 10%">
+    <div style="height:40px;">后台管理</div>
+    <div class="row" style="padding: 0 10%;background-color: aqua">
         <div class="col-xs-2 leftbox">
             <ul>
                 <li>访问统计</li>
@@ -41,11 +48,47 @@
                 <li>留言查看</li>
             </ul>
         </div>
-        <div class="col-xs-10">
-            <iframe src="/users/home" frameborder="0"></iframe>
+        <div class="col-xs-10" >
+
+            <table border="1" class="table table-bordered">
+                <tr>
+                    <th>序号</th>
+                    <th>用户</th>
+                    <th>名字</th>
+                    <th>职位</th>
+                    <th>部门</th>
+                    <th>操作</th>
+                </tr>
+                <% for(i=0;i<data.length;i++){%>
+                    <tr>
+                        <td>
+                            <%= data[i].id %>
+                        </td>
+                        <td>
+                            <%= data[i].zhanghao %>
+                        </td>
+                        <td>
+                            <%= data[i].name %>
+                        </td>
+                        <td>
+                            <%= data[i].zhiwei %>
+                        </td>
+                        <td>
+                            <%= data[i].bumen %>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" href="#" data-id="<%= data[i].id %>" role="button">删除</a>
+                        </td>
+                    </tr>
+                    <%}%>
+            </table>
+
+            <!-- <iframe frameborder="0" src="/users/home" ></iframe> -->
 
         </div>
     </div>
 </body>
+<script>
+</script>
 
 </html>

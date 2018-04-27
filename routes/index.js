@@ -1,7 +1,7 @@
 var express = require("express");
 var fs = require("fs");
 //var mysql = require("mysql");
-var select =require('../sql/select')
+
 var router = express.Router();
 
 /* GET home page. */
@@ -30,10 +30,10 @@ router.get("/cp", function(req, res, next) {
   res.render("cp", { title: "new" });
 });
 router.get("/fa", function(req, res, next) {
-  res.render("fa", { main: "还没写，请等待。。。。" });
+  res.render("fa", { data: "还没写，请等待。。。。" });
 });
 router.get("/lx", function(req, res, next) {
-  res.render("xiexie", { main: "还没写，请等待。。。。" });
+  res.render("xiexie", { data: "还没写，请等待。。。。" });
 });
 
 //留言
@@ -43,44 +43,8 @@ router.post("/liuyan", function(req, res, next) {
   //let neirong =req.body.neirong;
   //console.log(email+dianhua+neirong)
   console.log(req.body.email);
-  res.render("xiexie", { main: "谢谢您提出宝贵意见！" });
+  res.render("xiexie", { data: "谢谢您提出宝贵意见！" });
 });
 
-router.get("/login1", function(req, res, next) {
-  var zhanghao = "ts123"; //req.query.zhanghao;
-  let password = req.query.password;
-  // var connection = mysql.createConnection({
-  //   host: "localhost",
-  //   user: "root",
-  //   password: "",
-  //   database: "tonesat"
-  // });
-  // connection.connect();
-  var connect=select.getconnect();
-  connect.query('SELECT * FROM yuangong WHERE zhanghao=?',['ts123'],function(err, rows, fields) {
-    if (err) throw err;
-      console.log(rows);
-      res.render("xiexie",{main:rows});
-  })
-  connect.end()
-  // select.getallyuangong();
-  // console.log(sdsd);
-  // connection.query(
-  //   "SELECT * FROM yuangong WHERE zhanghao=" + connection.escape(zhanghao),
-  //   function(err, rows, fields) {
-  //     if (err) throw err;
-  //     console.log(rows[0].name);
-  //     if (rows[0].mima == password) {
-  //       res.cookie("user", req.query.user);
-  //       res.cookie("password", req.query.password);
-  //       res.render("index", {main:"ssss"});
-  //     } else {
-  //     res.render("xiexie",{main:"sdsdsd"});
-  //     }
-  //   }
-  // );
-  //connection.end();
 
-  //console.log(row);
-});
 module.exports = router;
