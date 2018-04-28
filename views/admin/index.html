@@ -38,57 +38,64 @@
 </head>
 
 <body>
+
     <div style="height:40px;">后台管理</div>
-    <div class="row" style="padding: 0 10%;background-color: aqua">
+    <div class="row" style="padding: 0 10%">
         <div class="col-xs-2 leftbox">
             <ul>
                 <li>访问统计</li>
                 <li>产品管理</li>
                 <li>发布新闻</li>
-                <li>留言查看</li>
+                <li id="liuyan">留言查看</li>
             </ul>
         </div>
-        <div class="col-xs-10" >
-
-            <table border="1" class="table table-bordered">
-                <tr>
-                    <th>序号</th>
-                    <th>用户</th>
-                    <th>名字</th>
-                    <th>职位</th>
-                    <th>部门</th>
-                    <th>操作</th>
-                </tr>
-                <% for(i=0;i<data.length;i++){%>
+        <div class="col-xs-10">
+            <!-- <div id="main">
+                <table border="1" class="table table-bordered">
                     <tr>
-                        <td>
-                            <%= data[i].id %>
-                        </td>
-                        <td>
-                            <%= data[i].zhanghao %>
-                        </td>
-                        <td>
-                            <%= data[i].name %>
-                        </td>
-                        <td>
-                            <%= data[i].zhiwei %>
-                        </td>
-                        <td>
-                            <%= data[i].bumen %>
-                        </td>
-                        <td>
-                            <a class="btn btn-danger" href="#" data-id="<%= data[i].id %>" role="button">删除</a>
-                        </td>
+                        <th>序号</th>
+                        <th>用户</th>
+                        <th>名字</th>
+                        <th>职位</th>
+                        <th>部门</th>
+                        <th>操作</th>
                     </tr>
-                    <%}%>
-            </table>
-
-            <!-- <iframe frameborder="0" src="/users/home" ></iframe> -->
+                    <% for(i=0;i<data.length;i++){%>
+                        <tr>
+                            <td>
+                                <%= data[i].id %>
+                            </td>
+                            <td>
+                                <%= data[i].zhanghao %>
+                            </td>
+                            <td>
+                                <%= data[i].name %>
+                            </td>
+                            <td>
+                                <%= data[i].zhiwei %>
+                            </td>
+                            <td>
+                                <%= data[i].bumen %>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="#" data-id="<%= data[i].id %>" role="button">删除</a>
+                            </td>
+                        </tr>
+                        <%}%>
+                </table>
+            </div> -->
+            <iframe frameborder="0" src="/users/home" ></iframe>
 
         </div>
+
     </div>
+
 </body>
 <script>
+    $('#liuyan').click(function () {
+        alert('sdsd');
+        $('#main').load("http://jquery.cuishifeng.cn/index.html");
+    })
 </script>
 
 </html>
