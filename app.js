@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mysql=require('mysql');
+var select = require("./sql/select");
 var index = require('./routes/index');
 var users = require('./routes/users');
 var func=require('./func');
@@ -40,10 +41,14 @@ app.use(function(req,res,next){
     // connection.end();
   } else {
     res.cookie('aa','tongxing')
+    let connect= select.getconnect();
+    let sql ='INSERT INTO tongji VALUES( ?,?,?,?,?)';
+    connect.query(sql,[,req.ip,'sds',req.hostname,func.getNowFormatDate()]);
     console.log('访问者IP:'+req.ip+'，网址为：'+req.hostname+",时间:"+func.getNowFormatDate());
-  }
 
+  }
   next();
+
 })
 app.use('/', index);
 app.use('/users', users);
