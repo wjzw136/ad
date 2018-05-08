@@ -14,7 +14,8 @@ router.get("/index", function(req, res, next) {
     res.render("admin/index", { data:'rows'})
 
 });
-router.get("/home", function(req, res, next) {
+
+router.get("/yglist", function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
     let sql='SELECT * FROM yuangong';
@@ -22,7 +23,7 @@ router.get("/home", function(req, res, next) {
       if (err) throw err;
       if(rows[0]){
         console.log(rows);
-        res.render("admin/home", { data:rows})
+        res.render("admin/yglist", { data:rows})
       }else{
         res.render("xiexie", { data: "查询数据库出错" });
       }

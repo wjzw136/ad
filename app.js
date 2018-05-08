@@ -9,13 +9,14 @@ var select = require("./sql/select");
 var index = require('./routes/index');
 var users = require('./routes/users');
 var func=require('./func');
+var ejs=require('ejs');
 var app = express();
 
-
+//ejs.delimiter='{'
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
-app.engine('.html',require('ejs').__express);
+app.engine('.html',ejs.__express);
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 //app.use(logger('dev'));
@@ -45,7 +46,7 @@ app.use(function(req,res,next){
     let sql ='INSERT INTO tongji VALUES( ?,?,?,?,?)';
     connect.query(sql,[,req.ip,'sds',req.hostname,func.getNowFormatDate()]);
     console.log('访问者IP:'+req.ip+'，网址为：'+req.hostname+",时间:"+func.getNowFormatDate());
-
+    connect.end();
   }
   next();
 
