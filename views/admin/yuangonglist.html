@@ -35,35 +35,8 @@
 </head>
 
 <body>
+        <%-include ./userheader.html %>
 
-        <div style="height:60px;background-image:url(/images/1.png)">后台管理</div>
-    <div class="adminmain">
-        <div>
-
-            <ul>
-                <li>
-                    <img src="/images/a.jpg" alt="" width="50px" height="50px">
-                </li>
-                <li>sdsdsdsd</li>
-            </ul>
-            <hr>
-            <ul class="lmlist">
-                <a href="/users/fwtongji">
-                    <li>访问统计</li>
-                </a>
-                <a href="/users/cpguanli">
-                    <li>产品管理</li>
-                </a>
-                <a href="/users/xinwenguanli">
-                    <li>发布新闻</li>
-                </a>
-                <a href="/users/liuyanchakan">
-                    <li id="liuyan">留言查看</li>
-                </a>
-            </ul>
-
-        </div>
-    </div>
     <div style="margin-left: 16%;margin-right: 10%;padding: 10px">
 
 
@@ -71,10 +44,10 @@
         <table border="1" class="table table-bordered">
             <tr>
                 <th>序号</th>
-                <th>ip</th>
-                <th>地域</th>
-                <th>网址</th>
-                <th>时间</th>
+                <th>名字</th>
+                <th>职位</th>
+                <th>部门</th>
+                <th>账号</th>
                 <th>操作</th>
             </tr>
             <% for(i=0;i< data.length;i++){%>
@@ -83,16 +56,16 @@
                         <%= data[i].id %>
                     </td>
                     <td>
-                        <%= data[i].email %>
+                        <%= data[i].name %>
                     </td>
                     <td>
-                        <%= data[i].dianhua %>
+                        <%= data[i].zhiwei %>
                     </td>
                     <td>
-                        <%= data[i].neirong %>
+                        <%= data[i].bumen %>
                     </td>
                     <td>
-                        <%= data[i].time %>
+                        <%= data[i].zhanghao %>
                     </td>
                     <td>
                         <a class="btn btn-danger" href="#" data-id="<%= data[i].id %>" role="button">删除</a>
