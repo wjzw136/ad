@@ -44,7 +44,7 @@ router.post("/liuyan", function(req, res, next) {
   let neirong = req.body.neirong;
   let time =func.getNowFormatDate();
   var connect = select.getconnect();
-  let sql='INSERT INTO liuyan (dianhua,email,neirong,time)VALUES(?,?,?,?);'
+  let sql='INSERT INTO liuyan (dianhua,email,neirong,time)VALUES(?,?,?,?);';
   connect.query(sql,[dianhua,email,neirong,time], function(err,rows,fields){
     if (err) throw err;
     if(rows[0]){

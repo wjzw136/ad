@@ -11,7 +11,8 @@ exports.getconnect = function() {
     host: config.dbhost,
     user: config.dbuser,
     password: config.dbpassword,
-    database: config.dbdatabase
+    database: config.dbdatabase,
+    multipleStatements:true
   });
   connection.connect();
   return connection;
