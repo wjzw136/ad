@@ -13,39 +13,40 @@
                 height: 100%;
             }
 
-            .leftbox{
-                background-color: bisque;
-                border-right:  sandybrown 1px solid
-            }
-            .leftbox li {
 
+            .adminmain  li {
+                margin: 0px;
                 padding: 5px 0px;
-                border-bottom: aqua 1px solid;
                 text-align: center
             }
 
-            .leftbox ul {
-                padding: 0;
-                margin: 0
+            .adminmain li:last-child {
+                border: 0
             }
 
-            .leftbox li:last-child {
-                border: 0
+            .adminmain {
+                padding: 10px;
+                font-size: 18px;
+                width: 16%;
+                position: fixed;
+                background-color: cadetblue
             }
         </style>
 </head>
 
 <body>
 
-    <div style="height:40px;">后台管理</div>
-    <div class="row" style="padding: 0 10%">
-        <div class="col-xs-2 leftbox">
+        <div style="height:60px;background-image:url(/images/1.png)">后台管理</div>
+    <div class="adminmain">
+        <div>
+
             <ul>
                 <li>
                     <img src="/images/a.jpg" alt="" width="50px" height="50px">
                 </li>
                 <li>sdsdsdsd</li>
             </ul>
+            <hr>
             <ul class="lmlist">
                 <a href="/users/fwtongji">
                     <li>访问统计</li>
@@ -60,47 +61,57 @@
                     <li id="liuyan">留言查看</li>
                 </a>
             </ul>
-        </div>
-        <div class="col-xs-10">
-            <!-- <div id="main">
-                <table border="1" class="table table-bordered">
-                    <tr>
-                        <th>序号</th>
-                        <th>用户</th>
-                        <th>名字</th>
-                        <th>职位</th>
-                        <th>部门</th>
-                        <th>操作</th>
-                    </tr>
-                    <% for(i=0;i<data.length;i++){%>
-                        <tr>
-                            <td>
-                                <%= data[i].id %>
-                            </td>
-                            <td>
-                                <%= data[i].zhanghao %>
-                            </td>
-                            <td>
-                                <%= data[i].name %>
-                            </td>
-                            <td>
-                                <%= data[i].zhiwei %>
-                            </td>
-                            <td>
-                                <%= data[i].bumen %>
-                            </td>
-                            <td>
-                                <a class="btn btn-danger" href="#" data-id="<%= data[i].id %>" role="button">删除</a>
-                            </td>
-                        </tr>
-                        <%}%>
-                </table>
-            </div> -->
 
         </div>
     </div>
+    <div style="margin-left: 16%;margin-right: 10%;padding: 10px">
+
+
+
+        <table border="1" class="table table-bordered">
+            <tr>
+                <th>序号</th>
+                <th>ip</th>
+                <th>地域</th>
+                <th>网址</th>
+                <th>时间</th>
+                <th>操作</th>
+            </tr>
+            <% for(i=0;i< data.length;i++){%>
+                <tr>
+                    <td>
+                        <%= data[i].id %>
+                    </td>
+                    <td>
+                        <%= data[i].email %>
+                    </td>
+                    <td>
+                        <%= data[i].dianhua %>
+                    </td>
+                    <td>
+                        <%= data[i].neirong %>
+                    </td>
+                    <td>
+                        <%= data[i].time %>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="#" data-id="<%= data[i].id %>" role="button">删除</a>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+    </div>
+
+
 </body>
 <script>
+    var righth = $(window).height() - 50;
+    $(".adminmain").css("height", righth);
+    $(window).resize(function () {
+        var righth = $(window).height() - 50;
+        $(".adminmain").css("height", righth);
+    });
+
 </script>
 
 </html>
