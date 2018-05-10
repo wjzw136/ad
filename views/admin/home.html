@@ -14,7 +14,7 @@
             }
 
 
-            .adminmain  li {
+            .adminmain li {
                 margin: 0px;
                 padding: 5px 0px;
                 text-align: center
@@ -25,55 +25,53 @@
             }
 
             .adminmain {
-                padding: 10px;
-                font-size: 18px;
+                padding: 0px;
+                font-size: 16px;
                 width: 16%;
                 position: fixed;
                 background-color: cadetblue
+            }
+            .lmlist  li{
+            }
+            .media img{
+
             }
         </style>
 </head>
 
 <body>
 
-        <%-include ./userheader.html %>
-    <div style="margin-left: 16%;margin-right: 10%;padding: 10px">
+    <%-include ./userheader.html %>
+        <div style="margin-left: 16%;margin-right: 10%;padding: 10px">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" width="120px" height="120px" src="/images/a.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">留言</h4>
+                            <p>x条</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" width="120px" height="120px" src="/images/a.jpg" alt="...">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">访问</h4>
+                        <p>x条</p>
+                    </div>
+                </div>
 
+            </div>
 
-
-        <table border="1" class="table table-bordered">
-            <tr>
-                <th>序号</th>
-                <th>ip</th>
-                <th>地域</th>
-                <th>网址</th>
-                <th>时间</th>
-                <th>操作</th>
-            </tr>
-            <% for(i=0;i< data.length;i++){%>
-                <tr>
-                    <td>
-                        <%= data[i].id %>
-                    </td>
-                    <td>
-                        <%= data[i].email %>
-                    </td>
-                    <td>
-                        <%= data[i].dianhua %>
-                    </td>
-                    <td>
-                        <%= data[i].neirong %>
-                    </td>
-                    <td>
-                        <%= data[i].time %>
-                    </td>
-                    <td>
-                        <a class="btn btn-danger" href="#" data-id="<%= data[i].id %>" role="button">删除</a>
-                    </td>
-                </tr>
-                <%}%>
-        </table>
-    </div>
+        </div>
 
 
 </body>

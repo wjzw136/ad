@@ -79,7 +79,7 @@ router.post("/login", function(req, res, next) {
       if (rows[0]) {
         if (rows[0].mima == password) {
           res.cookie("user", zhanghao);
-          res.redirect("/users/index");
+          res.redirect("/users/home");
         } else {
           res.render("xiexie", { data: "密码不正确" });
         }
