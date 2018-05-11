@@ -31,14 +31,14 @@ router.get("/yglist", function(req, res, next) {
     })
     connect.end();
   } else {
-    res.render("xiexie", { data: "你还未登录" });
+    res.redirect("/login");
   }
 
 });
 router.get("/fwtongji", function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
-    let sql='SELECT * FROM tongji LIMIT 0, 10';
+    let sql='SELECT * FROM tongji ORDER BY id desc';
     connect.query(sql, function(err,rows,fields){
       if (err) throw err;
       if(rows[0]){
@@ -49,6 +49,8 @@ router.get("/fwtongji", function(req, res, next) {
       }
     })
     connect.end();
+  }else{
+    res.redirect("/login");
   }
 })
 router.get("/cpguanli", function(req, res, next) {
@@ -65,12 +67,14 @@ router.get("/cpguanli", function(req, res, next) {
       }
     })
     connect.end();
+  }else{
+    res.redirect("/login");
   }
 })
 router.get("/liuyanchakan", function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
-    let sql='SELECT * FROM liuyan LIMIT 0, 10';
+    let sql='SELECT * FROM liuyan ORDER BY id desc';
     connect.query(sql, function(err,rows,fields){
       if (err) throw err;
       if(rows[0]){
@@ -81,22 +85,17 @@ router.get("/liuyanchakan", function(req, res, next) {
       }
     })
     connect.end();
+  }else{
+    res.redirect("/login");
   }
 })
 router.get("/xinwenguanli", function(req, res, next) {
   if (req.cookies.user) {
-    let connect = select.getconnect();
-    let sql='SELECT * FROM tongji LIMIT 0, 10';
-    connect.query(sql, function(err,rows,fields){
-      if (err) throw err;
-      if(rows[0]){
-        console.log(rows);
-        res.render("admin/fwtongji", { data:rows})
-      }else{
-        res.render("xiexie", { data: "查询数据库出错" });
-      }
-    })
-    connect.end();
+
+    res.render('admin/xinwenguanli');
+
+  }else{
+    res.redirect("/login");
   }
 })
 router.get("/yuangonglist", function(req, res, next) {
@@ -113,6 +112,8 @@ router.get("/yuangonglist", function(req, res, next) {
       }
     })
     connect.end();
+  }else{
+    res.redirect("/login");
   }
 })
 module.exports = router;

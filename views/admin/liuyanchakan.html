@@ -40,7 +40,7 @@
 
 
 
-        <table border="1" class="table table-bordered">
+        <table border="1" class="table table-bordered table-condensed">
             <tr>
                 <th>序号</th>
                 <th>email</th>
@@ -51,23 +51,23 @@
             </tr>
             <% for(i=0;i< data.length;i++){%>
                 <tr>
-                    <td>
+                    <td style="width: 5%;">
                         <%= data[i].id %>
                     </td>
-                    <td>
+                    <td style="width: 10%;">
                         <%= data[i].email %>
                     </td>
-                    <td>
+                    <td style="width: 10%;">
                         <%= data[i].dianhua %>
                     </td>
-                    <td>
+                    <td style="width: 55%;">
                         <%= data[i].neirong %>
                     </td>
-                    <td>
+                    <td style="width: 20%;">
                         <%= data[i].time %>
                     </td>
                     <td>
-                        <a class="btn btn-danger" href="#" data-id="<%= data[i].id %>" role="button">删除</a>
+                        <a class="btn btn-xs btn-danger " href="#" data-id="<%= data[i].id %>" role="button">删除</a>
                     </td>
                 </tr>
                 <%}%>
