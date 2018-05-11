@@ -101,7 +101,7 @@ router.get("/xinwenguanli", function(req, res, next) {
 router.get("/yuangonglist", function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
-    let sql='SELECT * FROM yuangong';
+    let sql='SELECT * FROM yuangong order by id desc';
     connect.query(sql, function(err,rows,fields){
       if (err) throw err;
       if(rows[0]){
@@ -115,5 +115,47 @@ router.get("/yuangonglist", function(req, res, next) {
   }else{
     res.redirect("/login");
   }
+})
+
+router.post("/addyg", function(req, res, next) {
+  if (req.cookies.user) {
+    let connect = select.getconnect();
+    let name=req.body.name;
+    let zhiwei=req.body.zhiwei;
+    let bumen=req.body.bumen;
+    let zhanghao =req.body.zhanghao;
+    let mima='123456';
+    let sql='INSERT INTO yuangong ( name, zhiwei,bumen,zhanghao,mima )VALUES( ?,?,?,?,?);';
+    connect.query(sql,[name,zhiwei,bumen,zhanghao,mima],function(err,rows,fields){
+      if (err) throw err;
+      if(rows){
+        console.log(rows);
+        res.redirect("/users/yuangonglist")
+      }else{
+        res.render("xiexie", { data: "查询数据库出错" });
+      }
+    })
+    connect.end();
+  }else{
+    res.redirect('/login');
+  }
+})
+
+
+router.post("/chanchu", function(req, res, next) {
+  if (req.cookies.user) {
+
+    console.log(req.body.id)
+    let connect = select.getconnect();
+    let id=req.body.id;
+    let sql='DELETE FROM yuangong WHERE id=?';
+    connect.query(sql,[id],function(err,rows,fields){
+      if (err) throw err;
+      res.send(id);
+    })
+    connect.end();
+  }else{
+    res.redirect('/login');
+   }
 })
 module.exports = router;
