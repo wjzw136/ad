@@ -15,7 +15,7 @@ router.get("/index", function(req, res, next) {
 router.get("/main", function(req, res, next) {
   res.render("main", { title: "sdsd" });
 });
-router.get("/news", function(req, res, next) {
+router.get("/newssss", function(req, res, next) {
   var dataa = fs.readFileSync("./xx.json", "utf-8", function(err, data) {
     if (err) {
       console.error(err);
@@ -26,6 +26,19 @@ router.get("/news", function(req, res, next) {
     }
   });
   res.render("moban", { htmldata: JSON.parse(dataa) });
+});
+router.get("/news", function(req, res, next) {
+  let connect =select.getconnect();
+  let sql ='select * from news order by id desc limit 0,10'
+  connect.query(sql,function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      res.render("news", { data: row});
+    }else{
+      res.render("xiexie", { data: "查询出错" });
+    }
+  })
+
 });
 router.get("/cp", function(req, res, next) {
   res.render("cp", { title: "new" });

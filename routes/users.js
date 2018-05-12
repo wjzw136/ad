@@ -1,6 +1,7 @@
 var express = require("express");
 var mysql = require("mysql");
 var select = require("../sql/select");
+var func = require("../func");
 var router = express.Router();
 
 /* GET users listing. */
@@ -56,12 +57,12 @@ router.get("/fwtongji", function(req, res, next) {
 router.get("/cpguanli", function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
-    let sql='SELECT * FROM tongji LIMIT 0, 10';
+    let sql='SELECT * FROM cp LIMIT 0, 10';
     connect.query(sql, function(err,rows,fields){
       if (err) throw err;
       if(rows[0]){
         console.log(rows);
-        res.render("admin/fwtongji", { data:rows})
+        res.render("admin/cpguanli", { data:rows})
       }else{
         res.render("xiexie", { data: "查询数据库出错" });
       }
@@ -142,13 +143,38 @@ router.post("/addyg", function(req, res, next) {
 })
 
 
+router.post("/addcp", function(req, res, next) {
+  if (req.cookies.user) {
+    let connect = select.getconnect();
+    let mingcheng=req.body.mingcheng;
+    let neibie=req.body.neibie;
+    let xinghao=req.body.xinghao;
+    let time=func.getNowFormatDate();
+    let sql='INSERT INTO cp ( mingcheng, neibie,xinghao,time )VALUES( ?,?,?,?);';
+    connect.query(sql,[mingcheng,neibie,xinghao,time],function(err,rows,fields){
+      if (err) throw err;
+      if(rows){
+        console.log(rows);
+        res.redirect("/users/cpguanli")
+      }else{
+        res.render("xiexie", { data: "查询数据库出错" });
+      }
+    })
+    connect.end();
+  }else{
+    res.redirect('/login');
+  }
+})
+
+
 router.post("/chanchu", function(req, res, next) {
   if (req.cookies.user) {
 
     console.log(req.body.id)
     let connect = select.getconnect();
     let id=req.body.id;
-    let sql='DELETE FROM yuangong WHERE id=?';
+    let neibie =req.body.neibie
+    let sql="DELETE FROM "+neibie+" WHERE id=?";
     connect.query(sql,[id],function(err,rows,fields){
       if (err) throw err;
       res.send(id);
@@ -157,5 +183,30 @@ router.post("/chanchu", function(req, res, next) {
   }else{
     res.redirect('/login');
    }
+})
+
+
+router.post("/addnews", function(req, res, next) {
+  if (req.cookies.user) {
+    let user=req.cookies.user;
+    let connect = select.getconnect();
+    let biaoti=req.body.biaoti;
+    let neirong=req.body.neirong;
+    let biaoqian=req.body.biaoqian;
+    let time=func.getNowFormatDate();
+    let sql='INSERT INTO news ( biaoti,neirong,time,user,biaoqian)VALUES( ?,?,?,?,?)';
+    connect.query(sql,[biaoti,neirong,time,user,biaoqian],function(err,rows,fields){
+      if (err) throw err;
+      if(rows){
+        console.log(rows);
+        res.redirect("/users/xinwenguanli")
+      }else{
+        res.render("xiexie", { data: "查询数据库出错" });
+      }
+    })
+    connect.end();
+  }else{
+    res.redirect('/login');
+  }
 })
 module.exports = router;

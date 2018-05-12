@@ -36,41 +36,55 @@
 
 <body>
 
-        <%-include ./userheader.html %>
-    <div style="margin-left: 16%;margin-right: 10%;padding: 10px">
+    <%-include ./userheader.html %>
+        <div style="margin-left: 16%;margin-right: 10%;padding: 10px">
+            <form action="/users/addnews" method="post">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
 
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">发布新闻</h4>
-                </div>
-                <div class="modal-body">
-                    <form action="" method="post">
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label text-right">标题</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control input-sm" id="inputEmail3" name="zhanghao">
-                            </div>
+                            <h4 class="modal-title">发布新闻</h4>
                         </div>
-                        <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label text-right">内容</label>
-                            <div class="col-sm-10">
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label text-right">标题</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm" id="inputEmail3" name="biaoti">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label text-right">内容</label>
+                                <div class="col-sm-10">
                                     <textarea name="neirong" class="form-control" rows="3"></textarea>
+                                </div>
                             </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label text-right">标签</label>
+                                <div class="col-sm-10">
+                                    <select name="biaoqian" class="form-control input-sm">
+                                        <option>幻神</option>
+                                        <option>一线</option>
+                                        <option>二线</option>
+                                        <option>三线</option>
+                                        <option>下水道</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
                         </div>
+                        <div class="modal-footer ">
+                            <button type="submit" class="btn btn-primary ">提交</button>
+                        </div>
+                    </div>
+            </form>
 
-                    </form>
-                </div>
-                <div class="modal-footer ">
-                    <button type="button" class="btn btn-primary ">提交</button>
-                </div>
-            </div>
             <!-- /.modal-content -->
+            </div>
+
+
         </div>
-
-
-    </div>
 
 
 </body>
