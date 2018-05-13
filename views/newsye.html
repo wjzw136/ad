@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公司简介-同星通信</title>
+    <%-include ../public/html/css.html %>
+</head>
+
+<body>
+
+    <%-include ./header.html %>
+
+        <div class="main">
+
+            <div class="row">
+                <div class="col-xs-3">
+
+                    <%-include ./lxwm.html %>
+                        <%-include ./liuyan.html %>
+                </div>
+                <div class="col-xs-9">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3>
+                                <%= data[0].biaoti %>
+                            </h3>
+                            <p>
+                                <%= data[0].neirong %>
+                            </p>
+                            <div>
+                                <hr>
+                                <span class="label label-info"><%= data[0].biaoqian %></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%-include ./foo.html %>
+</body>
+
+</html>

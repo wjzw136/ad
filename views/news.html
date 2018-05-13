@@ -11,63 +11,67 @@
 
 <body>
 
-        <%-include ./header.html %>
+    <%-include ./header.html %>
 
-    <div class="main">
+        <div class="main">
 
-        <div class="row">
-            <div class="col-xs-3">
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">
-                        新闻动态
-                    </a>
-                    <a href="#" class="list-group-item">企业文化</a>
-                    <a href="#" class="list-group-item">研发实力</a>
-                    <a href="#" class="list-group-item">公司简介</a>
-                    <a href="#" class="list-group-item">领导致辞</a>
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            新闻动态
+                        </a>
+                        <a href="#" class="list-group-item">企业文化</a>
+                        <a href="#" class="list-group-item">研发实力</a>
+                        <a href="#" class="list-group-item">公司简介</a>
+                        <a href="#" class="list-group-item">领导致辞</a>
+                    </div>
+                    <%-include ./lxwm.html %>
+                        <%-include ./liuyan.html %>
                 </div>
-                <%-include ./lxwm.html %>
-                <%-include ./liuyan.html %>
-            </div>
-            <div class="col-xs-9">
-                <div style="color:black">
-                    <ol class="breadcrumb">
-                        <li>
-                            <a href="#">
-                                <span>首页</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <span> 新闻动态</span>
-                        </li>
-                    </ol>
-                </div>
-                <table class="table table-hover">
-                    <tr>
-                        <th></th>
-                        <th>标题</th>
-                        <th>时间</th>
-                    </tr>
-                    <% for(i=0;i< data.length;i++){%>
+                <div class="col-xs-9">
+                    <div style="color:black">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#">
+                                    <span>首页</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <span> 新闻动态</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <table class="table table-hover">
                         <tr>
-                            <td style="width: 5%;">
-                                <span class="label label-info"><%= data[i].biaoqian %></span>
-                            </td>
-                            <td style="width: 70%;">
-                                <%= data[i].biaoti %>
-                            </td>
-                            <td style="width: 25%;">
-                                <%= data[i].time %>
-                            </td>
-
+                            <th></th>
+                            <th>标题</th>
+                            <th>时间</th>
                         </tr>
-                        <%}%>
-                </table>
+                        <% for(i=0;i< data.length;i++){%>
+                            <tr>
+                                <td style="width: 5%;">
+                                    <span class="label label-info">
+                                        <%= data[i].biaoqian %>
+                                    </span>
+                                </td>
+
+                                    <td style="width: 70%;">
+                                        <a href="/news/<%= data[i].id %>"> <%= data[i].biaoti %></a>
+                                    </td>
+
+                                <td style="width: 25%;">
+                                    <%= data[i].time %>
+                                </td>
+
+                            </tr>
+                            <%}%>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
 
-    <%-include ./foo.html %>
+        <%-include ./foo.html %>
 </body>
 
 </html>

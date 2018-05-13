@@ -141,4 +141,22 @@ router.get("/login", function(req, res, next) {
   res.render("login");
 });
 
+
+
+
+router.get('/news/:id',function(req, res, next){
+  let id=req.params.id;
+  let connect =select.getconnect();
+  let sql ='select * from news where id =?'
+  connect.query(sql,[id],function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      res.render("newsye", { data: row});
+    }else{
+      res.render("xiexie", { data: "查询出错" });
+    }
+  })
+  connect.end();
+
+})
 module.exports = router;
