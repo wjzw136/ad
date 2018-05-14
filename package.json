@@ -14,6 +14,7 @@
     "morgan": "~1.8.1",
     "mysql": "^2.15.0",
     "serialport": "^6.0.5",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "wangeditor": "^3.1.1"
   }
 }
