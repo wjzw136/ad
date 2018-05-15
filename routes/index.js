@@ -15,6 +15,9 @@ router.get("/index", function(req, res, next) {
 router.get("/main", function(req, res, next) {
   res.render("main", { title: "sdsd" });
 });
+router.get("/lx", function(req, res, next) {
+  res.render("lx", { title: "联系我们" });
+});
 router.get("/newssss", function(req, res, next) {
   var dataa = fs.readFileSync("./xx.json", "utf-8", function(err, data) {
     if (err) {
@@ -41,13 +44,52 @@ router.get("/news", function(req, res, next) {
 
 });
 router.get("/cp", function(req, res, next) {
-  res.render("cp", { title: "new" });
+  let connect =select.getconnect();
+  let sql ='select * from cp';
+  let sql2='select * from cp where neibie="动中通卫通天线"';
+  let sql3='select * from cp where neibie="静中通卫通天线"';
+  connect.query(sql + ";" + sql2+ ";" + sql3,function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      console.log(row[1]);
+      res.render("cp",{ all: row[0],dzt: row[1],jzt: row[2]});
+    }else{
+      res.render("xiexie", { data: "查询出错" });
+    }
+  })
+  connect.end();
+
+
+
+
 });
+router.get('/cp/:id',function(req, res, next){
+  let id=req.params.id;
+  let connect =select.getconnect();
+  let sql ='select * from cp where id =?'
+  connect.query(sql,[id],function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      console.log(row);
+      res.render("cpye", { data: row});
+    }else{
+      res.render("xiexie", { data: "新闻不存在" });
+    }
+  })
+  connect.end();
+
+})
+
+
+
+
+
+
+
+
+
 router.get("/fa", function(req, res, next) {
   res.render("fa", { data: "还没写，请等待。。。。" });
-});
-router.get("/lx", function(req, res, next) {
-  res.render("xiexie", { data: "还没写，请等待。。。。" });
 });
 
 //留言
@@ -153,7 +195,7 @@ router.get('/news/:id',function(req, res, next){
     if(row[0]){
       res.render("newsye", { data: row});
     }else{
-      res.render("xiexie", { data: "查询出错" });
+      res.render("xiexie", { data: "新闻不存在" });
     }
   })
   connect.end();

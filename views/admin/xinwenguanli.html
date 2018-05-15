@@ -40,48 +40,51 @@
         <div style="margin-left: 16%;margin-right: 10%;padding: 10px">
             <form action="/users/addnews" method="post">
                 <!-- <div class="modal-dialog" role="document" style="width:100%"> -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">发布新闻</h4>
-                        </div>
-                        <div class="modal-body">
-
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label text-right">标题</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control input-sm" id="inputEmail3" name="biaoti">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-2 control-label text-right">内容</label>
-                                <div class="col-sm-10">
-                                    <!-- <textarea name="neirong" class="form-control" rows="3"></textarea> -->
-                                    <div id="editor">
-                                        <p>欢迎使用 wangEditor 富文本编辑器</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-2 control-label text-right">标签</label>
-                                <div class="col-sm-10">
-                                    <select name="biaoqian" class="form-control input-sm">
-                                        <option>幻神</option>
-                                        <option>一线</option>
-                                        <option>二线</option>
-                                        <option>三线</option>
-                                        <option>下水道</option>
-                                    </select>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer ">
-                            <button type="submit" class="btn btn-primary ">提交</button>
-                        </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">发布新闻</h4>
                     </div>
-                    <!-- /.modal-content -->
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label text-right">标题</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control input-sm" id="inputEmail3" name="biaoti">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label text-right">内容</label>
+                            <div id="abcsdsds" class="col-sm-10">
+                                <!-- <textarea name="neirong" class="form-control" rows="3"></textarea> -->
+                                <div id="editor">
+
+                                </div>
+                                <div style="display: none">
+                                    <input id="neirong1" type="text" name="neirong">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label text-right">标签</label>
+                            <div class="col-sm-10">
+                                <select name="biaoqian" class="form-control input-sm">
+                                    <option>幻神</option>
+                                    <option>一线</option>
+                                    <option>二线</option>
+                                    <option>三线</option>
+                                    <option>下水道</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="submit" class="btn btn-primary ">提交</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
                 <!-- </div> -->
             </form>
 
@@ -94,14 +97,30 @@
 </body>
 <script type="text/javascript" src="/js/wangEditor.min.js"></script>
 <script>
-    var righth = $(window).height() - 50;
-    $(".adminmain").css("height", righth);
-    $(window).resize(function () {
+    $(document).ready(function () {
         var righth = $(window).height() - 50;
         $(".adminmain").css("height", righth);
-    });
-    var E = window.wangEditor;
-    var editor = new E('#editor');
-    editor.create()
+        $(window).resize(function () {
+            var righth = $(window).height() - 50;
+            $(".adminmain").css("height", righth);
+        });
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        editor.create();
+        $("#abcsdsds").mouseout(
+            function () {
+                $("#neirong1").attr({value:editor.txt.html()});
+            }
+        )
+
+    })
+
+    //var neirong1 = document.getElementById("neirong1");
+    //$("#sdsds").blur(function(){
+    //    neirong1.value='dsdsd'//editor.txt.html();
+    //})
+
+
 </script>
+
 </html>

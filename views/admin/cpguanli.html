@@ -48,9 +48,10 @@
                 <tr>
                     <th>序号</th>
                     <th>名称</th>
-                    <th>型号</th>
-                    <th>类别</th>
-
+                    <th>描述</th>
+                    <th>特点</th>
+                    <th>场景</th>
+                    <th>图片</th>
                     <th>操作</th>
                 </tr>
                 <% for(i=0;i< data.length;i++){%>
@@ -58,19 +59,24 @@
                         <td style="width: 5%;">
                             <%= data[i].id %>
                         </td>
-                        <td style="width: 19%;">
-                            <%= data[i].mingcheng %>
+                        <td style="width: 15%;">
+                            <%= data[i].name %>
                         </td>
-                        <td style="width: 19%;">
-                            <%= data[i].xinghao %>
+                        <td style="width: 15%;">
+                            <%= data[i].miaoshu %>
                         </td>
-                        <td style="width: 19%;">
+                        <td style="width: 15%;">
+                            <%= data[i].tedian %>
+                        </td>
+
+                        <td style="width: 15%;">
                             <%= data[i].neibie %>
                         </td>
-                        <td style="width: 19%;">
-                            <%= data[i].time %>
-                        </td>
-                        <td style="width: 19%;">
+                        <td style="width: 15%;">
+                            <img src="<%= data[i].imgurl %>" width="100%" alt="" srcset="">
+
+                            </td>
+                        <td style="width: 15%;">
                             <a class="btn btn-xs btn-danger" data-id="<%= data[i].id %>" role="button">删除</a>
                             <a class="btn btn-xs btn-danger" href="#" bj-id="<%= data[i].id %>" role="button">编辑</a>
                         </td>
@@ -89,17 +95,35 @@
                             <h4 class="modal-title">添加产品</h4>
                         </div>
                         <div class="modal-body">
-                            <form action="/users/addcp" method="post">
+                            <form action="/users/addcp" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label text-right">名称</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control input-sm" id="inputEmail3" name="mingcheng">
+                                        <input type="text" class="form-control input-sm" id="inputEmail3" name="name">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">型号</label>
+                                    <label for="inputEmail3" class="col-sm-2 control-label text-right">描述</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control input-sm" id="inputPassword3" name="xinghao">
+                                        <input type="text" class="form-control input-sm" id="inputEmail3" name="miaoshu">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label text-right">特点</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control input-sm" id="inputEmail3" name="tedian">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">场景</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control input-sm" id="inputPassword3" name="changjing">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile" class="col-sm-2 control-label text-right">图片地址</label>
+                                    <div class="col-sm-10">
+                                        <input type="file" id="exampleInputFile" multiple="multiple" name="wenjian">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -143,7 +167,7 @@
             $.ajax({
                 type: "POST",
                 url: "/users/chanchu",
-                data: { id: $(this).attr('data-id'),neibie:'cp'},
+                data: { id: $(this).attr('data-id'), neibie: 'cp' },
                 success: function (msg) {
                     if (msg) {
 

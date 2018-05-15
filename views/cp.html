@@ -18,10 +18,7 @@
             <div class="row">
                 <div class="col-xs-3">
                     <ul class="list-group" id="cplist">
-                        <li class="list-group-item active">产品介绍</li>
-                        <a href="/cp">
-                            <li class="list-group-item">所有产品</li>
-                        </a>
+                        <a href="/cp"> <li class="list-group-item active">产品介绍</li></a>
                         <li class="list-group-item" data-dzt="dzt">动中通卫通天线</li>
                         <li class="list-group-item" data-jzt="jzt">静中通卫通天线</li>
                         <li class="list-group-item" data-cz="cz">船载卫通天线</li>
@@ -33,11 +30,9 @@
                         <%-include ./liuyan.html %>
                 </div>
                 <div class="col-xs-9 cpbox">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            动中通卫通天线
-                        </div>
-                        <div class="panel-footer">
+
+
+
                             <!-- <ul class="list-inline" id="cplist12">
 
                                 <li>
@@ -130,145 +125,51 @@
                                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
-                            </div>
-                        </div>
+
                     </div>
+
                     <div class="panel panel-default">
                         <div class="panel-body">
                             静中通卫通天线
                         </div>
                         <div class="panel-footer" style="text-align: center">
                             <ul class="list-inline">
-                                <li>
-                                    <img src="/images/cp_cn_1.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/cp_cn_2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/cp_cn_3.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/cp_cn_4.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/cp_cn_5.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
+                                <% for(i=0;i< jzt.length;i++){%>
+                                    <li>
+                                        <a href="/cp/<%= jzt[i].id %>">
+                                            <img src="<%= jzt[i].imgurl %>" width="200px" height="200px" class="img-circle">
+                                        </a>
+                                        <div>
+                                            <span>
+                                                <%= jzt[i].name %>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <%}%>
+
                             </ul>
                         </div>
                     </div>
 
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            船载卫通天线
+                            动中通卫通天线
                         </div>
                         <div class="panel-footer" style="text-align: center">
                             <ul class="list-inline">
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            相控阵卫通天线
-                        </div>
-                        <div class="panel-footer" style="text-align: center">
-                            <ul class="list-inline">
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            S波段动中通天线
-                        </div>
-                        <div class="panel-footer" style="text-align: center">
-                            <ul class="list-inline">
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="/images/b2.jpg" width="200px" height="200px" class="img-circle">
-                                    <div>
-                                        <span>sdsdsadsdsds</span>
-                                    </div>
-                                </li>
+                                <% for(i=0;i< dzt.length;i++){%>
+                                    <li>
+                                        <a href="<%= "/cp/"+dzt[i].id %>">
+                                            <img src="<%= dzt[i].imgurl %>" width="200px" height="200px" class="img-circle">
+                                        </a>
+                                        <div>
+                                            <span>
+                                                <%= dzt[i].name %>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <%}%>
+
                             </ul>
                         </div>
                     </div>
