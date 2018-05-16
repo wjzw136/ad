@@ -115,6 +115,9 @@ body {
   color: #B7BCC0
 
 }
+.foo li{
+  margin: 10px 0px
+}
 .main{
   padding: 10px 10%;
 }

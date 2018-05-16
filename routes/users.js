@@ -188,10 +188,19 @@ router.post("/addcp", upload.any(), function(req, res, next) {
 router.post("/chanchu", function(req, res, next) {
   if (req.cookies.user) {
     console.log(req.body.id);
+    console.log(req.cookies.user);
     let connect = select.getconnect();
     let id = req.body.id;
     let neibie = req.body.neibie;
     let sql = "DELETE FROM " + neibie + " WHERE id=?";
+    let user =req.body.user;
+    let sql2 = "SELECT lv from yuangong WHERE zhanghao =?";
+    let lv ="";
+    connect.query(sql2, [user], function(err, row1, fields) {
+      if (err) throw err;
+      console.log(row1);
+    });
+    //console.log("222"+lv);
     connect.query(sql, [id], function(err, rows, fields) {
       if (err) throw err;
       res.send(id);

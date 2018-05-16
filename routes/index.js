@@ -201,4 +201,10 @@ router.get('/news/:id',function(req, res, next){
   connect.end();
 
 })
+
+
+
+router.get("/xiazai", function(req, res, next) {
+  res.download('public/images/产品手册.pdf', '产品手册.pdf')
+});
 module.exports = router;
