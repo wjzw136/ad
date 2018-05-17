@@ -169,9 +169,10 @@
                 url: "/users/chanchu",
                 data: { id: $(this).attr('data-id'), neibie: 'cp' },
                 success: function (msg) {
-                    if (msg) {
-
-                        $('a[data-id=' + msg + ']').parents('tr').empty();
+                    if (msg.zhuangtai=="ok") {
+                       $('a[data-id='+msg.id+']').parents('tr').empty();
+                    }else{
+                        alert('没有权限');
                     }
                 }
             });
