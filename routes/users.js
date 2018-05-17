@@ -219,8 +219,7 @@ router.post("/addnews", function(req, res, next) {
     let neirong = req.body.neirong;
     let biaoqian = req.body.biaoqian;
     let time = func.getNowFormatDate();
-    let sql =
-      "INSERT INTO news ( biaoti,neirong,time,user,biaoqian)VALUES( ?,?,?,?,?)";
+    let sql ="INSERT INTO news ( biaoti,neirong,time,user,biaoqian)VALUES( ?,?,?,?,?)";
     connect.query(sql, [biaoti, neirong, time, user, biaoqian], function(
       err,
       rows,
