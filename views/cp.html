@@ -20,23 +20,50 @@
                 <div class="col-xs-3">
                     <ul class="list-group" id="cplist">
                         <a href="/cp">
-                            <li class="list-group-item active">产品介绍</li>
+                            <li class="list-group-item active">全部产品</li>
                         </a>
-                        <li class="list-group-item" data-dzt="dzt">动中通卫通天线</li>
-                        <li class="list-group-item" data-jzt="jzt">静中通卫通天线</li>
-                        <li class="list-group-item" data-cz="cz">船载卫通天线</li>
-                        <li class="list-group-item" data-xkz="xkz">相控阵卫通天线</li>
-                        <li class="list-group-item" data-sbd="sbd">S波段动中通天线</li>
+                        <a href="/cp/dzt"><li class="list-group-item" data-dzt="dzt">动中通卫通天线</li></a>
+                        <a href="/cp/jzt"><li class="list-group-item" data-jzt="jzt">静中通卫通天线</li></a>
+                        <a href="/cp/cz"><li class="list-group-item" data-cz="cz">船载卫通天线</li></a>
+                        <a href="/cp/xkz"><li class="list-group-item" data-xkz="xkz">相控阵卫通天线</li></a>
+                        <a href="/cp/sbd"><li class="list-group-item" data-sbd="sbd">S波段动中通天线</li></a>
                     </ul>
                     <div class="text-center" style="margin: 20px 0px">
                         <a type="button" href="/xiazai" class="btn btn-info">下载产品手册</a>
                     </div>
 
                     <%-include ./lxwm.html %>
-                        <%-include ./liuyan.html %>
+                    <%-include ./liuyan.html %>
                 </div>
                 <div class="col-xs-9">
+                        <%if(biaoti){ %>
+                        <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <%= biaoti %>
+                                </div>
+                                <div class="panel-footer" style="text-align: center">
+                                    <ul class="list-inline">
+                                        <% for(i=0;i< data.length;i++){%>
+                                            <li>
+                                                <a href="<%= " /cp/ "+data[i].id %>">
+                                                    <img src="<%= data[i].imgurl %>" width="200px" height="200px" class="img-circle">
+                                                </a>
+                                                <div>
+                                                    <span>
+                                                        <%= data[i].name %>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        <%}%>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        <%}%>
                     <div class="cpbox">
+                            <%if(biaoti){ %>
+                                <%- html %>
+                                <%}%>
                         <!-- <ul class="list-inline" id="cplist12">
 
                                 <li>
@@ -79,6 +106,7 @@
 
 
                             </ul> -->
+                            <%if(!biaoti){ %>
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
@@ -131,7 +159,8 @@
                             </a>
 
                         </div>
-
+                        <%}%>
+                        <%if(jzt.length>0){ %>
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 静中通卫通天线
@@ -154,7 +183,8 @@
                                 </ul>
                             </div>
                         </div>
-
+                        <%}%>
+                        <%if(dzt.length>0){ %>
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 动中通卫通天线
@@ -177,6 +207,7 @@
                                 </ul>
                             </div>
                         </div>
+                        <%}%>
                     </div>
                 </div>
 
@@ -193,41 +224,35 @@
     }
 
 
-    $("#cplist li").click(function () {
-        if ($(this).attr('data-dzt')) {
-
-
-
-            cplistlitoblack()
-            colistlifirst()
-            $(this).css({ 'color': 'red' });
-            $(".cpbox").load("/html/dzt.html");
-
-
-
-        } else if ($(this).attr('data-jzt')) {
-            cplistlitoblack()
-            colistlifirst()
-            $(this).css({ 'color': 'red' });
-            $('.cpbox').load('/html/jzt.html');
-        } else if ($(this).attr('data-cz')) {
-            cplistlitoblack()
-            colistlifirst()
-            $(this).css({ 'color': 'red' });
-            $('.cpbox').load('/html/cz.html');
-        } else if ($(this).attr('data-xkz')) {
-            cplistlitoblack()
-            colistlifirst()
-            $(this).css({ 'color': 'red' });
-            $('.cpbox').load('/html/xkz.html');
-        } else if ($(this).attr('data-sbd')) {
-            cplistlitoblack()
-            colistlifirst()
-            $(this).css({ 'color': 'red' });
-            $('.cpbox').load('/html/sbd.html');
-        } else {
-        }
-    })
+    // $("#cplist li").click(function () {
+    //     if ($(this).attr('data-dzt')) {
+    //         cplistlitoblack()
+    //         colistlifirst()
+    //         $(this).css({ 'color': 'red' });
+    //         //$(".cpbox").load("/html/dzt.html");
+    //     } else if ($(this).attr('data-jzt')) {
+    //         cplistlitoblack()
+    //         colistlifirst()
+    //         $(this).css({ 'color': 'red' });
+    //         //$('.cpbox').load('/html/jzt.html');
+    //     } else if ($(this).attr('data-cz')) {
+    //         cplistlitoblack()
+    //         colistlifirst()
+    //         $(this).css({ 'color': 'red' });
+    //         $('.cpbox').load('/html/cz.html');
+    //     } else if ($(this).attr('data-xkz')) {
+    //         cplistlitoblack()
+    //         colistlifirst()
+    //         $(this).css({ 'color': 'red' });
+    //         $('.cpbox').load('/html/xkz.html');
+    //     } else if ($(this).attr('data-sbd')) {
+    //         cplistlitoblack()
+    //         colistlifirst()
+    //         $(this).css({ 'color': 'red' });
+    //         $('.cpbox').load('/html/sbd.html');
+    //     } else {
+    //     }
+    // })
 </script>
 
 </html>

@@ -52,7 +52,7 @@ router.get("/cp", function(req, res, next) {
     if(err) throw err;
     if(row[0]){
       console.log(row[1]);
-      res.render("cp",{ all: row[0],dzt: row[1],jzt: row[2]});
+      res.render("cp",{ data: row[0],dzt: row[1],jzt: row[2],biaoti:0});
     }else{
       res.render("xiexie", { data: "查询出错" });
     }
@@ -63,6 +63,84 @@ router.get("/cp", function(req, res, next) {
 
 
 });
+router.get("/cp/jzt", function(req, res, next) {
+  let connect =select.getconnect();
+  let biaoti="静中通卫通天线";
+  let sql='select * from cp where neibie=?';
+  connect.query(sql,[biaoti],function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      let html= fs.readFileSync('views/jzt.html')
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+    }else{
+      res.render("xiexie", {data: "查询出错"});
+    }
+  })
+  connect.end();
+});
+router.get("/cp/dzt", function(req, res, next) {
+  let connect =select.getconnect();
+  let biaoti="动中通卫通天线";
+  let sql='select * from cp where neibie=?';
+  connect.query(sql,[biaoti],function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      let html= fs.readFileSync('views/dzt.html')
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+    }else{
+      res.render("xiexie", {data: "查询出错"});
+    }
+  })
+  connect.end();
+});
+router.get("/cp/cz", function(req, res, next) {
+  let connect =select.getconnect();
+  let biaoti="船载卫通天线";
+  let sql='select * from cp where neibie=?';
+  connect.query(sql,[biaoti],function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      let html= fs.readFileSync('views/cz.html')
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+    }else{
+      res.render("xiexie", {data: "查询出错"});
+    }
+  })
+  connect.end();
+});
+router.get("/cp/xkz", function(req, res, next) {
+  let connect =select.getconnect();
+  let biaoti="相控阵卫通天线";
+  let sql='select * from cp where neibie=?';
+  connect.query(sql,[biaoti],function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      let html= fs.readFileSync('views/xkz.html')
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+    }else{
+      res.render("xiexie", {data: "查询出错"});
+    }
+  })
+  connect.end();
+});
+router.get("/cp/sbd", function(req, res, next) {
+  let connect =select.getconnect();
+  let biaoti="S波段动中通天线";
+  let sql='select * from cp where neibie=?';
+  connect.query(sql,[biaoti],function(err,row){
+    if(err) throw err;
+    if(row[0]){
+      let html= fs.readFileSync('views/sbd.html')
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+    }else{
+      res.render("xiexie", {data: "查询出错"});
+    }
+  })
+  connect.end();
+});
+
+
+
 router.get('/cp/:id',function(req, res, next){
   let id=req.params.id;
   let connect =select.getconnect();
