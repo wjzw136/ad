@@ -8,6 +8,9 @@
     <title>后台管理</title>
     <%-include ../../public/html/css.html %>
         <style>
+            td {
+                vertical-align: middle;
+            }
             body {
                 width: 100%;
                 height: 100%;
@@ -36,57 +39,129 @@
 
 <body>
 
+
     <%-include ./userheader.html %>
         <div style="margin-left: 16%;margin-right: 10%;padding: 10px">
-            <form action="/users/addnews" method="post">
-                <!-- <div class="modal-dialog" role="document" style="width:100%"> -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">发布新闻</h4>
-                    </div>
-                    <div class="modal-body">
 
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label text-right">标题</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control input-sm" id="inputEmail3" name="biaoti">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label text-right">内容</label>
-                            <div id="abcsdsds" class="col-sm-10">
-                                <!-- <textarea name="neirong" class="form-control" rows="3"></textarea> -->
-                                <div id="editor">
+            <div>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">发布新闻</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">管理新闻</a>
+                    </li>
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <form action="/users/addnews" method="post">
+                            <!-- <div class="modal-dialog" role="document" style="width:100%"> -->
+                                <br>
+                            <div class="modal-content11">
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-1 control-label text-right">标题</label>
+                                        <div class="col-sm-11">
+                                            <input type="text" class="form-control input-sm" id="inputEmail3" name="biaoti">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-1 control-label text-right">内容</label>
+                                        <div id="abcsdsds" class="col-sm-11">
+                                            <!-- <textarea name="neirong" class="form-control" rows="3"></textarea> -->
+                                            <div id="editor">
+
+                                            </div>
+                                            <div style="display: none">
+                                                <input id="neirong1" type="text" name="neirong">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-1 control-label text-right">标签</label>
+                                        <div class="col-sm-11">
+                                            <select name="biaoqian" class="form-control input-sm">
+                                                <option>公司通告</option>
+                                                <option>行业新闻</option>
+                                                <option>产品发布</option>
+                                                <option>公司政策</option>
+                                                <option>招聘</option>
+                                                <option>专利</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
 
                                 </div>
-                                <div style="display: none">
-                                    <input id="neirong1" type="text" name="neirong">
+                                <div class="modal-footer ">
+                                    <button type="submit" class="btn btn-primary ">提交</button>
                                 </div>
                             </div>
+                            <!-- /.modal-content -->
+                            <!-- </div> -->
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
 
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label text-right">标签</label>
-                            <div class="col-sm-10">
-                                <select name="biaoqian" class="form-control input-sm">
-                                    <option>幻神</option>
-                                    <option>一线</option>
-                                    <option>二线</option>
-                                    <option>三线</option>
-                                    <option>下水道</option>
-                                </select>
-
-                            </div>
+                        <div class="panel-body">
+                            <table border="1" class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>编号</th>
+                                    <th>标题</th>
+                                    <th>内容</th>
+                                    <th>时间</th>
+                                    <th>标签</th>
+                                    <th>操作</th>
+                                </tr>
+                                <% for(i=0;i< data.length;i++){%>
+                                    <tr>
+                                        <td style="width: 5%;">
+                                            <%= data[i].id %>
+                                        </td>
+                                        <td style="width: 10%;">
+                                            <%= data[i].biaoti %>
+                                        </td>
+                                        <td style="width: 60%;">
+                                            <div style="height: 80px;overflow-y: scroll">
+                                                <%= data[i].neirong %>
+                                            </div>
+                                        </td>
+                                        <td style="width: 10%;">
+                                            <%= data[i].time %>
+                                        </td>
+                                        <td style="width: 10%;">
+                                            <%= data[i].biaoqian %>
+                                        </td>
+                                        <td style="width: 5%;">
+                                                <a class="btn btn-xs btn-danger" data-id="<%= data[i].id %>" role="button">删除</a>
+                                        </td>
+                                        <!-- <td>
+                                                                <a class="btn btn-xs btn-danger " href="#" data-id="<%= data[i].id %>" role="button">删除</a>
+                                                            </td> -->
+                                    </tr>
+                                    <%}%>
+                            </table>
                         </div>
 
                     </div>
-                    <div class="modal-footer ">
-                        <button type="submit" class="btn btn-primary ">提交</button>
-                    </div>
+
                 </div>
-                <!-- /.modal-content -->
-                <!-- </div> -->
-            </form>
+
+            </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -109,10 +184,28 @@
         editor.create();
         $("#abcsdsds").mouseout(
             function () {
-                $("#neirong1").attr({value:editor.txt.html()});
+                $("#neirong1").attr({ value: editor.txt.html() });
             }
         )
 
+    })
+
+
+     $('table a').click(function () {
+        if ($(this).attr('data-id')) {
+            $.ajax({
+                type: "POST",
+                url: "/users/shanchu",
+                data: { id: $(this).attr('data-id'),neibie:"news" },
+                success: function (msg) {
+                    if (msg.zhuangtai=="ok") {
+                       $('a[data-id='+msg.id+']').parents('tr').empty();
+                    }else{
+                        alert('没有权限');
+                    }
+                }
+            });
+        }
     })
 
     //var neirong1 = document.getElementById("neirong1");

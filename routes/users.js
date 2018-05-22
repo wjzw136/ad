@@ -20,7 +20,6 @@ var router = express.Router();
 router.get("/*",function(req, res, next) {
   if (req.cookies.user) {
     res.locals.user=req.cookies.user;
-    //console.log(res.locals.user11111);
     next()
   }else{
     res.redirect('/login')
@@ -52,7 +51,6 @@ router.get("/yglist", function(req, res, next) {
     connect.query(sql + ";" + sql2, function(err, rows, fields) {
       if (err) throw err;
       if (rows[0]) {
-        //console.log(rows);
         res.render("admin/yglist", { data: rows[0] });
       } else {
         res.render("xiexie", { data: "查询数据库出错" });
@@ -70,7 +68,6 @@ router.get("/fwtongji", function(req, res, next) {
     connect.query(sql, function(err, rows, fields) {
       if (err) throw err;
       if (rows[0]) {
-        //console.log(rows);
         res.render("admin/fwtongji", { data: rows });
       } else {
         res.render("xiexie", { data: "查询数据库出错" });
@@ -105,7 +102,6 @@ router.get("/liuyanchakan", function(req, res, next) {
     connect.query(sql, function(err, rows, fields) {
       if (err) throw err;
       if (rows[0]) {
-        //console.log(rows);
         res.render("admin/liuyanchakan", { data: rows });
       } else {
         res.render("xiexie", { data: "查询数据库出错" });
@@ -118,7 +114,17 @@ router.get("/liuyanchakan", function(req, res, next) {
 });
 router.get("/xinwenguanli", function(req, res, next) {
   if (req.cookies.user) {
-    res.render("admin/xinwenguanli");
+    let connect = select.getconnect();
+    let sql = "SELECT * FROM news ORDER BY id desc";
+    connect.query(sql, function(err, rows, fields) {
+      if (err) throw err;
+      if (rows[0]) {
+        res.render("admin/xinwenguanli", { data: rows });
+      } else {
+        res.render("xiexie", { data: "查询数据库出错" });
+      }
+    });
+    connect.end();
   } else {
     res.redirect("/login");
   }
@@ -131,7 +137,6 @@ router.get("/yuangonglist", function(req, res, next) {
     connect.query(sql, function(err, rows, fields) {
       if (err) throw err;
       if (rows[0]) {
-        ////console.log(rows);
         res.render("admin/yuangonglist", { data: rows,user:req.cookies.user });
       } else {
         res.render("xiexie", { data: "查询数据库出错" });
@@ -161,7 +166,6 @@ router.post("/addyg", function(req, res, next) {
     ) {
       if (err) throw err;
       if (rows) {
-        //console.log(rows);
         res.redirect("/users/yuangonglist");
       } else {
         res.render("xiexie", { data: "添加数据库出错" });
@@ -181,18 +185,17 @@ router.post("/addcp", upload.any(), function(req, res, next) {
     let neibie = req.body.neibie;
     let tedian = req.body.tedian;
     let changjing = req.body.changjing;
+    let fangan = req.body.fangan;
     let time = func.getNowFormatDate();
     let imgurl = "/uploads/" + req.files[0].originalname;
-    //console.log(req.files[0].filename);
-    let sql ="INSERT INTO cp ( name, miaoshu,tedian,changjing,imgurl,neibie)VALUES( ?,?,?,?,?,?)";
-      connect.query(sql, [name, miaoshu, tedian, changjing, imgurl,neibie], function(
+    let sql ="INSERT INTO cp ( name, miaoshu,tedian,changjing,imgurl,neibie,fangan)VALUES( ?,?,?,?,?,?,?)";
+      connect.query(sql, [name, miaoshu, tedian, changjing, imgurl,neibie,fangan], function(
         err,
         rows,
         fields
       ) {
         if (err) throw err;
         if (rows) {
-          //console.log(rows);
           res.redirect("/users/cpguanli");
         } else {
           res.render("xiexie", { data: "添加出错" });
@@ -204,16 +207,14 @@ router.post("/addcp", upload.any(), function(req, res, next) {
     res.redirect("/login");
   }
 });
-router.post("/chanchu", function(req, res, next) {
+router.post("/shanchu", function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
-    let neibie= req.body.neibie;
     let user =req.cookies.user;
     let sql = "SELECT lv from yuangong WHERE zhanghao =?";
     connect.query(sql, [user], function(err, row1, fields) {
       if (err) throw err;
       if(row1[0].lv==10){
-        console.log(row1[0].lv)
         next()
         //res.render("xiexie", { data: "查询数据库出错" });
       }else{
@@ -227,10 +228,8 @@ router.post("/chanchu", function(req, res, next) {
     res.redirect("/login");
   }
 });
-router.post("/chanchu", function(req, res, next) {
+router.post("/shanchu", function(req, res, next) {
   if (req.cookies.user) {
-    console.log(req.body.id);
-    console.log(req.cookies.user);
     let connect = select.getconnect();
     let id = req.body.id;
     let neibie = req.body.neibie;
@@ -239,7 +238,7 @@ router.post("/chanchu", function(req, res, next) {
       if (err) throw err;
       res.send({zhuangtai:'ok',id:id});
      });
-    //console.log("222"+lv);
+
     connect.end();
   } else {
     res.redirect("/login");
@@ -254,10 +253,8 @@ router.post("/bianji", function(req, res, next) {
     let sql = "select name,zhiwei,bumen,mima,zhanghao,id FROM " + neibie + " WHERE id=?";
     connect.query(sql, [id], function(err, rows, fields) {
       if (err) throw err;
-      console.log(rows);
       res.send({zhuangtai:'ok',data:rows});
      });
-    //console.log("222"+lv);
     connect.end();
   } else {
     res.redirect("/login");
@@ -273,14 +270,12 @@ router.post("/gxyg", function(req, res, next) {
     let zhanghao = req.body.zhanghao;
     let mima = "123456";
     let id = req.body.id;
-    console.log(id);
     let neibie = 'yuangong';
     let sql = "UPDATE " + neibie + " SET name=?,zhiwei=?,bumen=?,mima=?,zhanghao=? WHERE id=?";
     connect.query(sql, [name,zhiwei,bumen,mima,zhanghao,id], function(err, rows, fields) {
       if (err) throw err;
       res.redirect("/users/yuangonglist");
      });
-    //console.log("222"+lv);
     connect.end();
   } else {
     res.redirect("/login");
@@ -305,7 +300,6 @@ router.post("/addnews", function(req, res, next) {
     ) {
       if (err) throw err;
       if (rows) {
-        //console.log(rows);
         res.redirect("/users/xinwenguanli");
       } else {
         res.render("xiexie", { data: "查询数据库出错" });

@@ -167,7 +167,32 @@ router.get('/cp/:id',function(req, res, next){
 
 
 router.get("/fa", function(req, res, next) {
-  res.render("fa", { data: "还没写，请等待。。。。" });
+  let connect =select.getconnect();
+  let gj1="海洋";
+  let gj2="公安";
+  let gj3="应急";
+  let gj4="水利";
+  let gj5="林业";
+
+  let sql='select * from cp where fangan LIKE "%"?"%"';
+  let sql2='select * from cp where fangan LIKE "%"?"%"';
+  let sql3='select * from cp where fangan LIKE "%"?"%"';
+  let sql4='select * from cp where fangan LIKE "%"?"%"';
+  let sql5='select * from cp where fangan LIKE "%"?"%"';
+
+  connect.query(sql + ";" + sql2+ ";" + sql3+ ";" + sql4+ ";" + sql5,[gj1,gj2,gj3,gj4,gj5],function(err,row){
+    if(err) throw err;
+    if(row){
+      console.log(row);
+
+      //let html= fs.readFileSync('views/sbd.html')
+      res.render("fa",{ hy:row[0],ga:row[1],yj:row[2],sl:row[3],ly:row[4]});
+    }else{
+      res.render("xiexie", {data: "查询出错"});
+    }
+  })
+  connect.end();
+
 });
 
 //留言

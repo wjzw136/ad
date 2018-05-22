@@ -26,9 +26,16 @@
                                     <span>首页</span>
                                 </a>
                             </li>
-                            <li class="active">
-                                <span> 新闻动态</span>
+                            <li>
+                                <a href="/news">
+                                    <span>新闻动态</span>
+                                </a>
+
                             </li>
+                            <li>
+                                <span><%= data[0].biaoti %></span>
+                            </li>
+
                         </ol>
                     </div>
                     <div class="panel panel-default">
@@ -36,6 +43,7 @@
                             <h3>
                                 <%= data[0].biaoti %>
                             </h3>
+                            <br>
                             <p>
                                 <%- data[0].neirong %>
                             </p>

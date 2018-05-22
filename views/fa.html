@@ -10,21 +10,25 @@
         <style>
             #fabiaoqian ul {
                 background-color: #F8F8F8;
-                padding: 0px 10%;
+                padding: 0px 15%;
                 background-image: url(/images/newxitong_18.jpg)
             }
 
             #fabiaoqian ul li {
                 float: left;
                 padding: -1px 0px;
-
-
             }
+
 
             #fabiaoqian ul li a:hover {
                 color: black
             }
+            .col-xs-3 img{
+                width: 150px;
+                height: 150px;
+            }
         </style>
+
 </head>
 
 <body>
@@ -104,61 +108,26 @@
                                 </div>
                             </div>
 
-                            <div style="margin: 30px 10%;">
+                            <div style="margin: 30px 15%;">
                                 <h4>推荐使用产品</h4>
                                 <hr>
                                 <div class="row" style="padding: 0px">
-                                    <div class="col-xs-3">
-                                        <div class="thumbnail">
-                                            <img src="/images/cp_cn_1.jpg" alt="...">
-                                            <div class="caption">
-                                                <h4>Thumbnail label</h4>
-                                                <p>...</p>
-                                                <p>
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <div class="thumbnail">
-                                            <img src="/images/cp_cn_1.jpg" alt="...">
-                                            <div class="caption">
-                                                <h4>Thumbnail label</h4>
-                                                <p>...</p>
-                                                <p>
+                                    <% for(i=0;i< ga.length;i++){%>
+                                        <div class="col-xs-3">
+                                            <div class="thumbnail">
+                                                <img src="<%= ga[i].imgurl %>" alt="...">
+                                                <div class="caption">
+                                                    <h4>
+                                                        <%= ga[i].name %>
+                                                    </h4>
+                                                    <h5><%= ga[i].neibie %></h5>
+                                                    <a href="cp/<%= ga[i].id %>" class="btn btn-xs btn-danger">查看详情</a>
 
-                                                    <a href="#" class="btn btn-default" role="button">Button</a>
-                                                </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <div class="thumbnail">
-                                            <img src="/images/cp_cn_1.jpg" alt="...">
-                                            <div class="caption">
-                                                <h4>Thumbnail label</h4>
-                                                <p>...</p>
-                                                <p>
+                                        <%}%>
 
-                                                    <a href="#" class="btn btn-default" role="button">Button</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <div class="thumbnail">
-                                            <img src="/images/cp_cn_1.jpg" alt="...">
-                                            <div class="caption">
-                                                <h4>Thumbnail label</h4>
-                                                <p>...</p>
-                                                <p>
-
-                                                    <a href="#" class="btn btn-default" role="button">Button</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -215,64 +184,30 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin: 30px 10%;">
-                                    <h4>推荐使用产品</h4>
-                                    <hr>
-                                    <div class="row" style="padding: 0px">
+                            <div style="margin: 30px 15%;">
+                                <h4>推荐使用产品</h4>
+                                <hr>
+                                <div class="row" style="padding: 0px">
+                                    <% for(i=0;i< hy.length;i++){%>
                                         <div class="col-xs-3">
                                             <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
+                                                <img src="<%= hy[i].imgurl %>" alt="...">
                                                 <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
-                                                            <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
+                                                    <h4>
+                                                        <%= hy[i].name %>
+                                                    </h4>
+                                                    <h5><%= hy[i].neibie %></h5>
 
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
+                                                    <a href="cp/<%= hy[i].id %>" class="btn btn-xs btn-danger">查看详情</a>
 
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
-
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <%}%>
 
                                 </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,65 +256,28 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin: 30px 10%;">
-                                    <h4>推荐使用产品</h4>
-                                    <hr>
-                                    <div class="row" style="padding: 0px">
+                            <div style="margin: 30px 15%;">
+                                <h4>推荐使用产品</h4>
+                                <hr>
+                                <div class="row" style="padding: 0px">
+                                    <% for(i=0;i< ly.length;i++){%>
                                         <div class="col-xs-3">
                                             <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
+                                                <img src="<%= ly[i].imgurl %>" alt="...">
                                                 <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
-                                                            <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
+                                                    <h4>
+                                                        <%= ly[i].name %>
+                                                    </h4>
+                                                    <h5><%= ly[i].neibie %></h5>
+                                                    <a href="cp/<%= ly[i].id %>" class="btn btn-xs btn-danger">查看详情</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
-
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
-
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
-
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                        <%}%>
 
                                 </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -450,63 +348,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="margin: 30px 10%;">
-                                <h4>推荐使用产品</h4>
-                                <hr>
-                                <div class="row" style="padding: 0px">
+                        <div style="margin: 30px 15%;">
+                            <h4>推荐使用产品</h4>
+                            <hr>
+                            <div class="row" style="padding: 0px">
+                                <% for(i=0;i< yj.length;i++){%>
                                     <div class="col-xs-3">
                                         <div class="thumbnail">
-                                            <img src="/images/cp_cn_1.jpg" alt="...">
+                                            <img src="<%= yj[i].imgurl %>" alt="...">
                                             <div class="caption">
-                                                <h4>Thumbnail label</h4>
-                                                <p>...</p>
-                                                <p>
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <div class="thumbnail">
-                                            <img src="/images/cp_cn_1.jpg" alt="...">
-                                            <div class="caption">
-                                                <h4>Thumbnail label</h4>
-                                                <p>...</p>
-                                                <p>
+                                                <h4>
+                                                    <%= yj[i].name %>
+                                                </h4>
+                                                <h5><%= yj[i].neibie %></h5>
 
-                                                    <a href="#" class="btn btn-default" role="button">Button</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <div class="thumbnail">
-                                            <img src="/images/cp_cn_1.jpg" alt="...">
-                                            <div class="caption">
-                                                <h4>Thumbnail label</h4>
-                                                <p>...</p>
-                                                <p>
+                                                <a href="cp/<%= yj[i].id %>" class="btn btn-xs btn-danger">查看详情</a>
 
-                                                    <a href="#" class="btn btn-default" role="button">Button</a>
-                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xs-3">
-                                        <div class="thumbnail">
-                                            <img src="/images/cp_cn_1.jpg" alt="...">
-                                            <div class="caption">
-                                                <h4>Thumbnail label</h4>
-                                                <p>...</p>
-                                                <p>
+                                    <%}%>
 
-                                                    <a href="#" class="btn btn-default" role="button">Button</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+                        </div>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="shuili">
@@ -553,63 +417,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin: 30px 10%;">
-                                    <h4>推荐使用产品</h4>
-                                    <hr>
-                                    <div class="row" style="padding: 0px">
+                            <div style="margin: 30px 15%;">
+                                <h4>推荐使用产品</h4>
+                                <hr>
+                                <div class="row" style="padding: 0px">
+                                    <% for(i=0;i< sl.length;i++){%>
                                         <div class="col-xs-3">
                                             <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
+                                                <img src="<%= sl[i].imgurl %>" alt="...">
                                                 <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
-                                                            <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_1.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
+                                                    <h4>
+                                                        <%= sl[i].name %>
+                                                    </h4>
+                                                    <h5><%= sl[i].neibie %></h5>
 
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_2.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
+                                                    <a href="cp/<%= sl[i].id %>" class="btn btn-xs btn-danger">查看详情</a>
 
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <div class="thumbnail">
-                                                <img src="/images/cp_cn_3.jpg" alt="...">
-                                                <div class="caption">
-                                                    <h4>Thumbnail label</h4>
-                                                    <p>...</p>
-                                                    <p>
+                                        <%}%>
 
-                                                        <a href="#" class="btn btn-default" role="button">Button</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>

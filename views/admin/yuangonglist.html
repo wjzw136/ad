@@ -80,7 +80,7 @@
                     <%}%>
             </table>
 
-            <div class="modal fade"  tabindex="-1" role="dialog" id="addyg">
+            <div class="modal fade" style="margin-top: 100px" tabindex="-1" role="dialog" id="addyg">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -150,7 +150,7 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
-            <div class="modal fade"  tabindex="-1" role="dialog" id="bjyg">
+            <div class="modal fade" style="margin-top: 100px" tabindex="-1" role="dialog" id="bjyg">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -237,7 +237,7 @@
         if ($(this).attr('data-id')) {
             $.ajax({
                 type: "POST",
-                url: "/users/chanchu",
+                url: "/users/shanchu",
                 data: { id: $(this).attr('data-id'),neibie:"yuangong" },
                 success: function (msg) {
                     if (msg.zhuangtai=="ok") {

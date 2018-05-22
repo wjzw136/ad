@@ -102,15 +102,16 @@ body {
 }
 
 .bjcolor {
-  padding: 20px 10%;
+  padding: 20px 0;
   color: #ffffff;
 
 }
 .bjcolor .row{
-  padding:0 10%
+  padding:0 15%
 }
 .foo{
   padding: 20px 10%;
+  padding-left: 15%;
   background-image: url(/images/newxitong_18.jpg);
   color: #B7BCC0
 
