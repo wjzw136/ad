@@ -75,7 +75,7 @@
                         <td style="width: 15%;">
                             <img src="<%= data[i].imgurl %>" width="100%" alt="" srcset="">
 
-                            </td>
+                        </td>
                         <td style="width: 15%;">
                             <a class="btn btn-xs btn-danger" data-id="<%= data[i].id %>" role="button">删除</a>
                             <a class="btn btn-xs btn-danger" href="#" bj-id="<%= data[i].id %>" role="button">编辑</a>
@@ -85,7 +85,7 @@
                     <%}%>
             </table>
 
-            <div class="modal fade" tabindex="-1" role="dialog" id="addyg">
+            <div class="modal fade" style="margin-top: 50px" tabindex="-1" role="dialog" id="addyg">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -121,18 +121,19 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="exampleInputFile" class="col-sm-2 control-label text-right">方案</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" id="exampleInputFile1" class="form-control input-sm" multiple="multiple" name="fangan">
+                                        <h5>如：海洋，公安，应急，水利</h5>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="exampleInputFile" class="col-sm-2 control-label text-right">图片地址</label>
                                     <div class="col-sm-10">
                                         <input type="file" id="exampleInputFile" multiple="multiple" name="wenjian">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                        <label for="exampleInputFile" class="col-sm-2 control-label text-right">方案</label>
-                                        <div class="col-sm-10">
-                                            <input type="file" id="exampleInputFile" multiple="multiple" name="fangan">
-                                            <p>如：海洋，公安，应急，水利</p>
-                                        </div>
-                                    </div>
+
                                 <div class="form-group">
                                     <label for="inputPassword3" class="col-sm-2 control-label text-right">类别</label>
                                     <div class="col-sm-10">
@@ -145,13 +146,12 @@
                                         </select>
                                     </div>
                                 </div>
-
-                                <button type="submit" class="btn btn-primary">提交</button>
+                                <div style="margin-left: 19.5%"><button type="submit" class="btn btn-primary">提交</button></div>
                             </form>
                         </div>
-                        <div class="modal-footer ">
+                        <!-- <div class="modal-footer ">
 
-                        </div>
+                        </div> -->
                     </div>
                     <!-- /.modal-content -->
                 </div>
@@ -176,9 +176,9 @@
                 url: "/users/shanchu",
                 data: { id: $(this).attr('data-id'), neibie: 'cp' },
                 success: function (msg) {
-                    if (msg.zhuangtai=="ok") {
-                       $('a[data-id='+msg.id+']').parents('tr').empty();
-                    }else{
+                    if (msg.zhuangtai == "ok") {
+                        $('a[data-id=' + msg.id + ']').parents('tr').empty();
+                    } else {
                         alert('没有权限');
                     }
                 }
