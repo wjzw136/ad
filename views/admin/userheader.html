@@ -1,4 +1,27 @@
-<div style="height:60px;background-image:url(/images/1.png);z-index: 10000; position: fixed;top: 0px;left: 0px;background-color: khaki;width: 100%;">后台管理</div>
+<div style="height:60px;background-image:url(/images/1.png);z-index: 10000; position: fixed;top: 0px;left: 0px;background-color: khaki;width: 100%;">
+    <div style="height: 40px;line-height: 40px;margin-top:10px;font-size: 16px">
+        <ul class="nav nav-pills nav-justified" id="css1" style="color: #fff">
+            <li role="presentation">
+                <a target="_blank" href="/index">网站首页</a>
+            </li>
+            <li role="presentation">
+                <a target="_blank" href="/main">公司简介</a>
+            </li>
+            <li role="presentation">
+                <a target="_blank" href="/news">新闻动态</a>
+            </li>
+            <li role="presentation">
+                <a target="_blank" href="/cp">产品系列</a>
+            </li>
+            <li role="presentation">
+                <a target="_blank" href="/fa">解决方案</a>
+            </li>
+            <li role="presentation">
+                <a target="_blank" href="/lx">联系我们</a>
+            </li>
+        </ul>
+    </div>
+</div>
 <div class="userheader" style="margin-top: 60px">
     <div class="adminmain">
         <div>
@@ -9,11 +32,11 @@
                 <li>
                     <%= user %>
                 </li>
-                <div>
-                    <a href="/users/tuichu">
-                        <span style="font-size: 15px">退出登录</span>
+                <li>
+                    <a class="btn btn-xs btn-danger" href="/users/tuichu">
+                        退出登录
                     </a>
-                </div>
+                </li>
             </ul>
             <hr>
             <ul class="lmlist">

@@ -45,9 +45,21 @@ app.use(function(req,res,next){
     res.cookie('aa','tongxing')
     let connect= select.getconnect();
     let sql ='INSERT INTO tongji VALUES( ?,?,?,?,?)';
-    connect.query(sql,[,req.ip,'sds',req.hostname,func.getNowFormatDate()]);
-    console.log('访问者IP:'+req.ip+'，网址为：'+req.hostname+",时间:"+func.getNowFormatDate());
-    connect.end();
+    let sdip=req.ip;
+    func.getIpInfo(sdip, function(err, msg) {
+      console.log(msg);
+      if(err||msg<=0){
+        connect.query(sql,[,req.ip,'未知地',req.hostname,func.getNowFormatDate()]);
+        console.log('访问者IP:'+req.ip+'，网址为：'+req.hostname+'，城市：未知地，时间:'+func.getNowFormatDate());
+        connect.end();
+      }else{
+        connect.query(sql,[,req.ip,msg.city,req.hostname,func.getNowFormatDate()]);
+        console.log('访问者IP:'+req.ip+'，网址为：'+req.hostname+'，城市：'+msg.city+",时间:"+func.getNowFormatDate());
+        connect.end();
+      }
+    })
+
+
   }
   next();
 
