@@ -94,7 +94,80 @@
                             <h4 class="modal-title">添加员工</h4>
                         </div>
                         <div class="modal-body">
-                            <form action="/users/addyg" method="post">
+                            <form action="/users/addyg" method="post" id="addyg_form">
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label text-right">账号</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control input-sm" id="inputEmail3" name="zhanghao">
+                                        <div id="zhanghao_tishi">*以字母开头5-8位数</div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">姓名</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control input-sm" id="inputPassword3" name="name">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">职位</label>
+                                    <div class="col-sm-10">
+                                        <select name="zhiwei" class="form-control input-sm">
+                                            <option>幻神</option>
+                                            <option>一线</option>
+                                            <option>二线</option>
+                                            <option>三线</option>
+                                            <option>下水道</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">部门</label>
+                                    <div class="col-sm-10">
+                                        <select name="bumen" class="form-control input-sm">
+                                            <option>剑道联盟</option>
+                                            <option>和尚联盟</option>
+                                            <option>尼姑联盟</option>
+                                            <option>道士联盟</option>
+                                            <option>单身狗联盟</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">性别</label>
+                                    <div class="col-sm-10">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="xingbie" id="inlineRadio1" checked="true" value="男">男
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="xingbie" id="inlineRadio2" value="女"> 女
+                                        </label>
+                                    </div>
+                                </div>
+                                <button id="addyg_btn" type="button" class="btn btn-primary">提交</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer ">
+
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <div class="modal fade" style="margin-top: 100px" tabindex="-1" role="dialog" id="bjyg">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title">编辑员工</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/users/gxyg" method="post">
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label text-right">账号</label>
                                     <div class="col-sm-10">
@@ -136,85 +209,15 @@
                                     <label for="inputPassword3" class="col-sm-2 control-label text-right">性别</label>
                                     <div class="col-sm-10">
                                         <label class="radio-inline">
-                                            <input type="radio" name="xingbie" id="inlineRadio1" value="男">男
+                                            <input type="radio" name="xingbie" id="inlineRadio1" checked="true" value="男">男
                                         </label>
                                         <label class="radio-inline">
                                             <input type="radio" name="xingbie" id="inlineRadio2" value="女"> 女
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">提交</button>
-                            </form>
-                        </div>
-                        <div class="modal-footer ">
-
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <div class="modal fade" style="margin-top: 100px" tabindex="-1" role="dialog" id="bjyg">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title">编辑员工</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form action="/users/gxyg" method="post">
-                                <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label text-right">账号</label>
-                                    <div class="col-sm-10">
-                                        <input type="text"  class="form-control input-sm" id="inputEmail3" name="zhanghao">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">姓名</label>
-                                    <div class="col-sm-10">
-                                        <input type="text"  class="form-control input-sm" id="inputPassword3" name="name">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">职位</label>
-                                    <div class="col-sm-10">
-                                        <select name="zhiwei" class="form-control input-sm">
-                                            <option>幻神</option>
-                                            <option>一线</option>
-                                            <option>二线</option>
-                                            <option>三线</option>
-                                            <option>下水道</option>
-                                        </select>
-
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">部门</label>
-                                    <div class="col-sm-10">
-                                        <select name="bumen" class="form-control input-sm">
-                                            <option>剑道联盟</option>
-                                            <option>和尚联盟</option>
-                                            <option>尼姑联盟</option>
-                                            <option>道士联盟</option>
-                                            <option>单身狗联盟</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-2 control-label text-right">性别</label>
-                                    <div class="col-sm-10">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="xingbie" id="inlineRadio1" value="男">男
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="xingbie" id="inlineRadio2" value="女"> 女
-                                        </label>
-                                    </div>
-                                </div>
-                                <input type="hidden"  class="form-control input-sm" id="inputPassword3" name="id">
-                                <button type="submit"  class="btn btn-primary">提交</button>
+                                <input type="hidden" class="form-control input-sm" id="inputPassword3" name="id">
+                                <button id="addyg_btn1" class="btn btn-primary">提交</button>
                             </form>
                         </div>
                         <div class="modal-footer ">
@@ -242,11 +245,11 @@
             $.ajax({
                 type: "POST",
                 url: "/users/shanchu",
-                data: { id: $(this).attr('data-id'),neibie:"yuangong" },
+                data: { id: $(this).attr('data-id'), neibie: "yuangong" },
                 success: function (msg) {
-                    if (msg.zhuangtai=="ok") {
-                       $('a[data-id='+msg.id+']').parents('tr').empty();
-                    }else{
+                    if (msg.zhuangtai == "ok") {
+                        $('a[data-id=' + msg.id + ']').parents('tr').empty();
+                    } else {
                         alert('没有权限');
                     }
                 }
@@ -259,14 +262,14 @@
             $.ajax({
                 type: "POST",
                 url: "/users/bianji",
-                data: { id: $(this).attr('bj-id'),neibie:"yuangong" },
+                data: { id: $(this).attr('bj-id'), neibie: "yuangong" },
                 success: function (msg) {
-                    if (msg.zhuangtai=="ok") {
+                    if (msg.zhuangtai == "ok") {
                         $("#bjyg input[name='name']").val(msg.data[0].name);
                         $("#bjyg input[name='zhanghao']").val(msg.data[0].zhanghao);
                         $("#bjyg input[name='zhiwei']").val(msg.data[0].zhiwei);
                         $("#bjyg input[name='id']").val(msg.data[0].id);
-                    }else{
+                    } else {
                         alert('没有权限');
                     }
                 }
@@ -276,6 +279,19 @@
         }
 
     })
+
+
+    $('#addyg_btn').click(function () {
+        var re=/^[a-zA-Z][a-zA-Z0-9]{4,7}$/;
+        var zhanghao = $('input[name="zhanghao"]').val();
+        if (!re.test(zhanghao)) {
+            $("#zhanghao_tishi").html('<span style="color: red">不符合填写要求</span>');
+        } else {
+            $('#addyg_form').submit()
+        }
+    })
+
+
 
 </script>
 

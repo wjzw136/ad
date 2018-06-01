@@ -247,6 +247,26 @@ router.post("/shanchu", function(req, res, next) {
     res.redirect("/login");
   }
 });
+
+router.post("/getlbt", function(req, res, next) {
+    let connect = select.getconnect();
+    let user = req.cookies.user;
+    let sql = "SELECT lv from yuangong WHERE zhanghao =?";
+    connect.query(sql, [user], function(err, row1, fields) {
+      if (err) throw err;
+      if (row1[0].lv == 10) {
+        next();
+        //res.render("xiexie", { data: "查询数据库出错" });
+      } else {
+        res.send({ zhuangtai: "shibai" });
+        //res.redirect("/users/"+neibie+"list");
+      }
+    });
+    connect.end();
+});
+
+
+
 router.post("/shanchu", function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
@@ -293,15 +313,8 @@ router.post("/gxyg", function(req, res, next) {
     let mima = "123456";
     let id = req.body.id;
     let neibie = "yuangong";
-    let sql =
-      "UPDATE " +
-      neibie +
-      " SET name=?,zhiwei=?,bumen=?,mima=?,zhanghao=? WHERE id=?";
-    connect.query(sql, [name, zhiwei, bumen, mima, zhanghao, id], function(
-      err,
-      rows,
-      fields
-    ) {
+    let sql ="UPDATE " +neibie +" SET name=?,zhiwei=?,bumen=?,mima=?,zhanghao=? WHERE id=?";
+    connect.query(sql, [name, zhiwei, bumen, mima, zhanghao, id], function(err,rows,fields) {
       if (err) throw err;
       res.redirect("/users/yuangonglist");
     });
@@ -319,13 +332,8 @@ router.post("/addnews", function(req, res, next) {
     let neirong = req.body.neirong;
     let biaoqian = req.body.biaoqian;
     let time = func.getNowFormatDate();
-    let sql =
-      "INSERT INTO news ( biaoti,neirong,time,user,biaoqian)VALUES( ?,?,?,?,?)";
-    connect.query(sql, [biaoti, neirong, time, user, biaoqian], function(
-      err,
-      rows,
-      fields
-    ) {
+    let sql ="INSERT INTO news ( biaoti,neirong,time,user,biaoqian)VALUES( ?,?,?,?,?)";
+    connect.query(sql, [biaoti, neirong, time, user, biaoqian], function(err,rows,fields) {
       if (err) throw err;
       if (rows) {
         res.redirect("/users/xinwenguanli");
