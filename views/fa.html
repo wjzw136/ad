@@ -23,7 +23,7 @@
             #fabiaoqian ul li a:hover {
                 color: black
             }
-            .thumbnail img{
+            .thumbnail a img{
                 width: 180px;
                 height: 180px;
             }
@@ -115,7 +115,7 @@
                                     <% for(i=0;i< ga.length;i++){%>
                                         <div class="col-xs-3">
                                              <div class="thumbnail" style="margin-top: 10px">>
-                                                <img src="<%= ga[i].imgurl %>" alt="...">
+                                                <a href="cp/<%= ga[i].id %>"><img src="<%= ga[i].imgurl %>" alt="..."></a>
                                                 <div class="caption">
                                                     <h4>
                                                         <%= ga[i].name %>
@@ -190,7 +190,7 @@
                                     <% for(i=0;i< hy.length;i++){%>
                                         <div class="col-xs-3">
                                              <div class="thumbnail" style="margin-top: 10px">>
-                                                <img src="<%= hy[i].imgurl %>" alt="...">
+                                                <a href="cp/<%= ga[i].id %>"><img src="<%= hy[i].imgurl %>" alt="..."></a>
                                                 <div class="caption">
                                                     <h4>
                                                         <%= hy[i].name %>
@@ -262,7 +262,7 @@
                                     <% for(i=0;i< ly.length;i++){%>
                                         <div class="col-xs-3">
                                              <div class="thumbnail" style="margin-top: 10px">>
-                                                <img src="<%= ly[i].imgurl %>" alt="...">
+                                                <a href="cp/<%= ga[i].id %>"><img src="<%= ly[i].imgurl %>" alt="..."></a>
                                                 <div class="caption">
                                                     <h4>
                                                         <%= ly[i].name %>
@@ -354,7 +354,7 @@
                                 <% for(i=0;i< yj.length;i++){%>
                                     <div class="col-xs-3">
                                          <div class="thumbnail" style="margin-top: 10px">>
-                                            <img src="<%= yj[i].imgurl %>" alt="...">
+                                            <a href="cp/<%= ga[i].id %>"><img src="<%= yj[i].imgurl %>" alt="..."></a>
                                             <div class="caption">
                                                 <h4>
                                                     <%= yj[i].name %>
@@ -423,7 +423,7 @@
                                     <% for(i=0;i< sl.length;i++){%>
                                         <div class="col-xs-3">
                                             <div class="thumbnail" style="margin-top: 10px">
-                                                <img src="<%= sl[i].imgurl %>" alt="...">
+                                                <a href="cp/<%= ga[i].id %>"><img src="<%= sl[i].imgurl %>" alt="..."></a>
                                                 <div class="caption">
                                                     <h4>
                                                         <%= sl[i].name %>

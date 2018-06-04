@@ -23,7 +23,6 @@ router.get("/newssss", function(req, res, next) {
     if (err) {
       console.error(err);
     } else {
-      console.log(data);
       return data;
       //console.log(JSON.parse(data));
     }
@@ -51,7 +50,6 @@ router.get("/cp", function(req, res, next) {
   connect.query(sql + ";" + sql2+ ";" + sql3,function(err,row){
     if(err) throw err;
     if(row[0]){
-      console.log(row[1]);
       res.render("cp",{ data: row[0],dzt: row[1],jzt: row[2],biaoti:0});
     }else{
       res.render("xiexie", { data: "查询出错" });
@@ -148,7 +146,6 @@ router.get('/cp/:id',function(req, res, next){
   connect.query(sql,[id],function(err,row){
     if(err) throw err;
     if(row[0]){
-      console.log(row);
       res.render("cpye", { data: row});
     }else{
       res.render("xiexie", { data: "新闻不存在" });
@@ -183,8 +180,6 @@ router.get("/fa", function(req, res, next) {
   connect.query(sql + ";" + sql2+ ";" + sql3+ ";" + sql4+ ";" + sql5,[gj1,gj2,gj3,gj4,gj5],function(err,row){
     if(err) throw err;
     if(row){
-      console.log(row);
-
       //let html= fs.readFileSync('views/sbd.html')
       res.render("fa",{ hy:row[0],ga:row[1],yj:row[2],sl:row[3],ly:row[4]});
     }else{
@@ -210,7 +205,6 @@ router.post("/liuyan", function(req, res, next) {
   ) {
     if (err) throw err;
     if (rows[0]) {
-      console.log(rows);
     }
   });
   res.render("xiexie", { data: "谢谢您提出宝贵意见！" });
@@ -221,7 +215,6 @@ router.post("/login", function(req, res, next) {
   let zhanghao = req.body.zhanghao;
   let password = req.body.password;
   let jizhu = req.body.jizhu;
-  console.log(req.body);
   // var connection = mysql.createConnection({
   //   host: "localhost",
   //   user: "root",

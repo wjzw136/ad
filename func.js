@@ -49,4 +49,4 @@ exports.getIpInfo = function(ip, cb) {
   }).on('error', function(e) { cb(e); });
 };
 
-console.log(fs.readdirSync('./'))
+//console.log(fs.readdirSync('./'))

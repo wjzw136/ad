@@ -288,7 +288,7 @@ router.post("/bianji", function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
     let id = req.body.id;
-    let neibie = "yuangong";
+    let neibie = req.body.neibie;
     let sql =
       "select name,zhiwei,bumen,mima,zhanghao,id FROM " +
       neibie +
