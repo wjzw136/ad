@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-05-22 17:27:12
+Date: 2018-06-05 15:31:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,7 +32,7 @@ CREATE TABLE `cp` (
   `bianhao` varchar(255) DEFAULT NULL,
   `fangan` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cp
@@ -42,9 +42,15 @@ INSERT INTO `cp` VALUES ('35', 'sdad', '动中通卫通天线', 'sdad', null, 's
 INSERT INTO `cp` VALUES ('36', 'sdsd', '动中通卫通天线', 'sdsad', null, 'sdassd', 'sdasd', null, '/uploads/222.jpg', null, '应急');
 INSERT INTO `cp` VALUES ('38', 'sss', '船载卫通天线', 'sdad', null, 'sda', 'sda', null, '/uploads/2018-05-18_105352.jpg', null, '林业');
 INSERT INTO `cp` VALUES ('39', 'sdad', '相控阵卫通天线', 'sdad', null, 'sdad', 'dad', null, '/uploads/2018-05-18_105415.jpg', null, '应急');
-INSERT INTO `cp` VALUES ('41', 's', 'S波段动中通天线', 'sd', null, 'sds', 'dsd', null, '/uploads/2018-05-18_105458.jpg', null, '公安');
 INSERT INTO `cp` VALUES ('32', 'sdsadsd', '静中通卫通天线', 'sdsadsd', null, 'sdsadsd', 'dsd', null, '/uploads/cp_cn_4.jpg', null, '海洋');
 INSERT INTO `cp` VALUES ('31', 'sdsd', '动中通卫通天线', 'sdsd', null, 'dsdsad', 'dsdsd', null, '/uploads/cp_cn_3.jpg', null, '林业');
+INSERT INTO `cp` VALUES ('42', '雷达天线', '动中通卫通天线', '连卡佛设计案例库房的骄傲了', null, '是大的空间啊非常保暖撒开电脑卡机的那款手机打不开车上班接口设计爱丁堡', '看来是你的拉升看到你', null, '/uploads/24.png', null, '海洋，公安，应急，水利');
+INSERT INTO `cp` VALUES ('43', '固定天线', '静中通卫通天线', '世界都好难杀开了家电脑', null, '卡俱乐部出发时刻记得', '发射大所多无多撒多', null, '/uploads/3维.png', null, '海洋，公安，应急，水利');
+INSERT INTO `cp` VALUES ('44', '平板电视天线', '静中通卫通天线', '塑胶地板奶萨觉得那开了电脑', null, '打开了今年大路上看到你', '房车，旅游大巴，长途汽车', null, '/uploads/3.png', null, '海洋，公安，应急，水利');
+INSERT INTO `cp` VALUES ('45', '撒大声地', 'S波段动中通天线', '打印', null, '打印', '打印', null, '/uploads/LJM435.png', null, '海洋，公安，应急，水利');
+INSERT INTO `cp` VALUES ('46', '22222', 'S波段动中通天线', '22', null, '22', '22', null, '/uploads/checkered.png', '0612', '222');
+INSERT INTO `cp` VALUES ('50', 'sdsd', '相控阵卫通天线', '1', null, '1', '22222222222', null, '/uploads/moren.jpg', '0612', '海洋，公安，应急，水利');
+INSERT INTO `cp` VALUES ('48', 'sdsa', '相控阵卫通天线', 'sdsa', null, 'dsd', 'sdsa', null, '/uploads/moren.jpg', 'sdas', 'sdas，应急，水利');
 
 -- ----------------------------
 -- Table structure for liuyan
@@ -57,11 +63,17 @@ CREATE TABLE `liuyan` (
   `neirong` varchar(255) DEFAULT NULL,
   `time` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of liuyan
 -- ----------------------------
+INSERT INTO `liuyan` VALUES ('14', '', '18566757360', '广东同星通信技术有限公司深圳分公司\r\n', '2018-05-22,18:19:11');
+INSERT INTO `liuyan` VALUES ('15', 'ss@qq.com', 'sss', 'ssss', '2018-05-23,11:14:9');
+INSERT INTO `liuyan` VALUES ('16', 'ss@qq.com', 'sss', 'ssssssss', '2018-05-23,011:15:02');
+INSERT INTO `liuyan` VALUES ('17', 'sdsda@163.com', '222', 'sdsad', '2018-05-23,12:58:05');
+INSERT INTO `liuyan` VALUES ('18', 'sdsda@163.com', '222', 'sdsad', '2018-05-23,12:58:16');
+INSERT INTO `liuyan` VALUES ('19', 'sdsda@163.com', '222', 'sdsadsdsad', '2018-05-23,12:58:21');
 INSERT INTO `liuyan` VALUES ('5', 'ssssss@111.com', 'sssssssss', '（23号大院）4025号航运综合楼1栋七层B031', '2018-04-28,9:40:46');
 INSERT INTO `liuyan` VALUES ('7', 'sdsdsadsad@163.com', 'sdsdsad', '同星通信总部“东莞同济大学研究院”是东莞市人民政府和同济大学联合创办的开放式产学研平台，也是光科学前沿研究、新材料和通信技术领域高端技术研发与产业化基地。2015年被认定为广东省新型研发机构，并获批广东省超材料工程技术研究中心。', '2018-05-11,16:48:29');
 INSERT INTO `liuyan` VALUES ('8', 'sdsdsadsad@163.com', 'sdsdsad', '合创办的开放式产学研平台，也是光科学前沿研究、新材料和通信技术领域高端技术研发与产业化基地。2015年被认定为广东省新型研发机构，并获批广东省超材料工程技术研究中心。', '2018-05-11,16:57:51');
@@ -82,7 +94,7 @@ CREATE TABLE `news` (
   `user` varchar(255) DEFAULT NULL,
   `biaoqian` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of news
@@ -93,6 +105,7 @@ INSERT INTO `news` VALUES ('16', '双频段卫星通信系统天线子系统伺�
 INSERT INTO `news` VALUES ('17', '双频段共用天线面卫星通信车载静中通', '<p>随着社会的发展，国家对应急救援工作越来越重视，应急救援工作展开的同时，对应急减灾的硬件设施也在一步步提高，全面走向自动化，智能化。在应急救援工作中，通信工具是必不可少的，能将现场实况实时的传输到指挥大厅，是展开应急救援工作的关键，只有全面了解了应急现场状况才能够做出及时准确的应对措施，才能够保证应急救援工作迅速快捷，落到实处，减少减缓灾情，防止恶化。</p><p><br></p><p>陕西欧赛通信科技有限公司是一家专业从事卫星通信设备天线生产的厂家，同时提供系统集成以及技术支持和服务。我公司是国家认定的高新企业，同时也是应急减灾协会的会员，公司产品广泛应用于部队，公安、消防、环保、气象、地震、人防工程、森林防火、新闻采集等国家政府应急指挥系统，因公司高质量的产品和雄厚的技术实力，多个项目获得用户的高度评价。</p><p><br></p><p><strong>C/Ku双频段静中通车载站</strong></p><p><br></p><p><strong>型号</strong></p><p>OS-SA218V3型-------1.8米C、Ku双频段共用天线面偏馈静中通天伺系统</p><p><strong>功能</strong></p><p>u&nbsp;自动展开/收藏；</p><p>u&nbsp;自动定wei；</p><p>u&nbsp;自动捕获卫星；</p><p>u&nbsp;自动跟踪（步进跟踪），跟踪精度优于1/10接收波束宽度；</p><p>u&nbsp;C、Ku频段电动切换；</p><p>u&nbsp;在雨区实施全天候不间断的卫星通信；</p><p><strong>特点</strong></p><p>u&nbsp;符合CCIR580-4，通过国际卫星、欧洲卫星组织、亚洲卫星公司、东方卫星公司入网要求；</p><p>u&nbsp;3分钟完成自动展开、自动定wei并自动捕获卫星；</p><p>u&nbsp;信标接收机采用双锁相环技术窄带捕获；</p><p>u&nbsp;电动极化控制；</p><p>u&nbsp;控制系统功能强大，体积小；</p><p>u&nbsp;C、Ku频段馈源、上、下行信号均电动切换；</p><p>u&nbsp;C、Ku频段馈源置于共用天线面，不影响天线效益。</p>', '2018-05-22,11:17:8', 'ts123', '幻神');
 INSERT INTO `news` VALUES ('18', '总经理致辞', '<table width=\"100%\" border=\"0\" cellspacing=\"2\" cellpadding=\"0\" align=\"center\"><tbody><tr><td><p>光阴荏苒，时光如梭，随着通信技术的发展，卫星通信产业越来越密切地影响着大家的生活。要实现人类通信的“无缝”连接，卫星通信扮演着越来越重要的作用。卫星通信不仅有效地补充了其他通信手段的不足和不能，更是在抢险、防灾、救灾、处理突发事件的应急通信中大有作为。</p><p>广东同星通信公司聚焦于“卫星移动通信天线”产品的研发、制造和销售服务。卫星移动通信天线是一个专业性强、技术密集的产品，涉及天线与微波器件技术、信号处理技术、伺服控制技术、惯性导航技术、嵌入式软件技术、精密传动机构设计技术和精密加工工艺技术等，是典型的多学科交叉复杂系统。同星通信核心技术团队具备8年以上卫通行业同类产品研发工作经验，具备产品开发创新能力。掌握产品自主核心技术，所研产品在军用和民用两个市场的卫星移动通信系统中得到应用和认可。在这个商业竞争日趋激烈的时代，同星通信始终本着“团结共荣、求效求新、创造卓越”的公司精神，用先进的技术和真诚的服务回报客户的信任。</p><p>山海茫茫，千舟竞发，自信使我们在这个竞争与发展同在、机遇与挑战并存的时代信心十足，扬帆起航。我们脚踏实地、不懈追求，不断追求一流的品质和服务，营造热情开放、真诚协作、开拓进取的共赢气氛。我们真诚欢迎社会各界宾朋莅临同星，共谋发展，共创辉煌！</p><p>同星通信奉行求效求新精神，脚踏实地、负重攀越，努力成为全球卫星通信行业值得信赖的专业服务商。</p><p>同星通信，永远是您最值得信赖的朋友！</p><p></p><p><br></p><div>2017年6月于东莞·松山湖</div><br><br></td></tr></tbody></table>', '2018-05-22,11:18:11', 'ts123', '幻神');
 INSERT INTO `news` VALUES ('22', '微波暗室测量', '<p><span style=\"color: inherit; font-family: inherit; font-size: 24px;\">技术指标</span><br></p><h3><img src=\"http://www.idtu.cn/upload_files/20160706133031873187.png\" width=\"445\" height=\"390\" align=\"right\" alt=\"\"></h3><p>1.天线测试<br></p><p>增益测量精度：优于0.1dB</p><p><br></p><p>2.天线罩测试<br></p><p>测试精度：瞄准误差优于1mrad，透波率、方向图优于0.2dB</p><p><br></p><p>3.平板材料反射率、透波性能测试<br>测试精度：1~5GHz，≤1dB；5~10GHz，≤0.5dB</p><h3><br></h3><h3>主要功能及应用范围</h3><p>&nbsp; &nbsp; &nbsp; &nbsp; 微波暗室测量平台测试频率覆盖在1~26.5GHz,可提供天线远场性能、材料电磁参数测试的等技术服务。&nbsp;&nbsp;<br></p>', '2018-05-22,13:57:50', 'admin', '产品发布');
+INSERT INTO `news` VALUES ('26', '自动化工程师 招聘人数：2', '<p>岗位职责：</p><p>1. 负责新开发自动化设备的方案设计和项目推进；</p><p>2. 负责控制系统与机械构成、软件平台的一体化设计；</p><p>3. 完成产品设备的组装、调试及运行；</p><p>4. 负责相关项目的售前、实施、售后等环节的技术支持工作。</p><p>岗位要求：</p><p>1、本科学历及以上；</p><p>2、熟练掌握伺服系统控制技术；</p><p>3、有自动化测试系统开发经验。</p><p><br></p>', '2018-05-31,11:41:46', 'admin', '招聘');
 
 -- ----------------------------
 -- Table structure for tongji
@@ -105,20 +118,19 @@ CREATE TABLE `tongji` (
   `wangzhi` varchar(255) DEFAULT NULL,
   `time` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tongji
 -- ----------------------------
-INSERT INTO `tongji` VALUES ('8', '127.0.0.1', 'sds', 'localhost', '2018-05-11,15:20:24');
-INSERT INTO `tongji` VALUES ('2', '127.0.0.1', 'sds', 'localhost', '2018-05-07,17:14:40');
-INSERT INTO `tongji` VALUES ('3', '127.0.0.1', 'sds', 'localhost', '2018-05-07,17:15:53');
-INSERT INTO `tongji` VALUES ('4', '127.0.0.1', 'sds', 'localhost', '2018-05-07,17:16:56');
-INSERT INTO `tongji` VALUES ('5', '127.0.0.1', 'sds', 'localhost', '2018-05-08,13:46:23');
-INSERT INTO `tongji` VALUES ('6', '127.0.0.1', 'sds', 'localhost', '2018-05-08,14:29:6');
-INSERT INTO `tongji` VALUES ('7', '127.0.0.1', 'sds', 'localhost', '2018-05-09,9:21:19');
-INSERT INTO `tongji` VALUES ('9', '127.0.0.1', 'sds', '127.0.0.1', '2018-05-11,15:26:45');
-INSERT INTO `tongji` VALUES ('10', '127.0.0.1', 'sds', 'localhost', '2018-05-11,15:58:40');
+INSERT INTO `tongji` VALUES ('51', '127.0.0.1', '未知地', 'localhost', '2018-05-23,13:24:23');
+INSERT INTO `tongji` VALUES ('52', '127.0.0.1', '未知地', 'localhost', '2018-05-23,14:25:35');
+INSERT INTO `tongji` VALUES ('53', '127.0.0.1', '', 'localhost', '2018-05-25,09:41:50');
+INSERT INTO `tongji` VALUES ('54', '127.0.0.1', '', 'localhost', '2018-05-31,11:33:55');
+INSERT INTO `tongji` VALUES ('55', '127.0.0.1', '', 'localhost', '2018-06-01,15:36:03');
+INSERT INTO `tongji` VALUES ('56', '127.0.0.1', '未知地', 'localhost', '2018-06-04,11:24:15');
+INSERT INTO `tongji` VALUES ('49', '127.0.0.1', '未知地', 'localhost', '2018-05-23,011:19:11');
+INSERT INTO `tongji` VALUES ('50', '127.0.0.1', '东莞', 'localhost', '2018-05-23,11:20:11');
 INSERT INTO `tongji` VALUES ('11', '192.168.10.99', 'sds', '192.168.10.99', '2018-05-11,17:9:1');
 INSERT INTO `tongji` VALUES ('12', '192.168.10.31', 'sds', '192.168.10.99', '2018-05-11,17:15:55');
 INSERT INTO `tongji` VALUES ('13', '192.168.10.14', 'sds', '192.168.10.99', '2018-05-11,17:17:33');
@@ -129,24 +141,9 @@ INSERT INTO `tongji` VALUES ('17', '192.168.10.25', 'sds', '192.168.10.99', '201
 INSERT INTO `tongji` VALUES ('18', '127.0.0.1', 'sds', 'localhost', '2018-05-14,9:19:26');
 INSERT INTO `tongji` VALUES ('19', '127.0.0.1', 'sds', 'localhost', '2018-05-15,8:49:4');
 INSERT INTO `tongji` VALUES ('20', '192.168.10.33', 'sds', '192.168.10.99', '2018-05-15,15:12:45');
-INSERT INTO `tongji` VALUES ('21', '127.0.0.1', 'sds', 'localhost', '2018-05-16,9:26:31');
-INSERT INTO `tongji` VALUES ('22', '127.0.0.1', 'sds', 'localhost', '2018-05-16,13:26:25');
-INSERT INTO `tongji` VALUES ('23', '127.0.0.1', 'sds', 'localhost', '2018-05-16,15:57:38');
-INSERT INTO `tongji` VALUES ('24', '127.0.0.1', 'sds', 'localhost', '2018-05-17,9:57:35');
-INSERT INTO `tongji` VALUES ('25', '127.0.0.1', 'sds', 'localhost', '2018-05-17,10:14:45');
-INSERT INTO `tongji` VALUES ('26', '127.0.0.1', 'sds', 'localhost', '2018-05-17,11:24:50');
-INSERT INTO `tongji` VALUES ('27', '127.0.0.1', 'sds', 'localhost', '2018-05-17,11:33:6');
-INSERT INTO `tongji` VALUES ('28', '127.0.0.1', 'sds', 'localhost', '2018-05-17,11:34:29');
-INSERT INTO `tongji` VALUES ('29', '127.0.0.1', 'sds', 'localhost', '2018-05-17,15:27:24');
-INSERT INTO `tongji` VALUES ('30', '127.0.0.1', 'sds', 'localhost', '2018-05-17,15:43:4');
-INSERT INTO `tongji` VALUES ('31', '192.168.10.33', 'sds', '192.168.10.99', '2018-05-17,15:47:45');
-INSERT INTO `tongji` VALUES ('32', '192.168.10.33', 'sds', '192.168.10.99', '2018-05-17,15:49:52');
-INSERT INTO `tongji` VALUES ('33', '127.0.0.1', 'sds', 'localhost', '2018-05-18,9:44:30');
-INSERT INTO `tongji` VALUES ('34', '127.0.0.1', 'sds', 'localhost', '2018-05-18,11:37:23');
-INSERT INTO `tongji` VALUES ('35', '127.0.0.1', 'sds', 'localhost', '2018-05-22,10:23:34');
-INSERT INTO `tongji` VALUES ('36', '127.0.0.1', 'sds', 'localhost', '2018-05-22,10:30:22');
-INSERT INTO `tongji` VALUES ('37', '127.0.0.1', 'sds', 'localhost', '2018-05-22,13:43:1');
-INSERT INTO `tongji` VALUES ('38', '127.0.0.1', 'sds', 'localhost', '2018-05-22,15:4:29');
+INSERT INTO `tongji` VALUES ('57', '127.0.0.1', '', 'localhost', '2018-06-05,09:43:57');
+INSERT INTO `tongji` VALUES ('58', '192.168.10.33', '未知地', '192.168.10.99', '2018-06-05,11:15:01');
+INSERT INTO `tongji` VALUES ('48', '127.0.0.1', '未知地', 'localhost', '2018-05-23,11:5:18');
 
 -- ----------------------------
 -- Table structure for xiangmu
@@ -181,14 +178,16 @@ CREATE TABLE `yuangong` (
   `mima` varchar(10) NOT NULL,
   `lv` int(10) unsigned NOT NULL,
   `imgurl` text,
+  `xingbie` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yuangong
 -- ----------------------------
-INSERT INTO `yuangong` VALUES ('张三', '领导', '五虎上将', '4', 'ts123', '123', '1', null);
-INSERT INTO `yuangong` VALUES ('湿哒哒2', '幻神', '剑道联盟', '2', 'ts125', '123456', '1', null);
-INSERT INTO `yuangong` VALUES ('李是的撒', '幻神', '剑道联盟', '3', 'ts124', '123456', '1', null);
-INSERT INTO `yuangong` VALUES ('达到', '下水道', '尼姑联盟', '45', '是的撒', '123456', '1', null);
-INSERT INTO `yuangong` VALUES ('管理员', '管理员', '管理员', '1', 'admin', '123456', '10', null);
+INSERT INTO `yuangong` VALUES ('张三', '下水道', '剑道联盟', '4', 'ts123', '123456', '1', null, '');
+INSERT INTO `yuangong` VALUES ('湿哒哒2', '幻神', '剑道联盟', '2', 'ts125', '123456', '1', null, '');
+INSERT INTO `yuangong` VALUES ('李是的撒', '幻神', '剑道联盟', '3', 'ts124', '123456', '1', null, '');
+INSERT INTO `yuangong` VALUES ('管理员', '管理员', '管理员', '1', 'admin', '123456', '10', null, '');
+INSERT INTO `yuangong` VALUES ('2222', '一线', '道士联盟', '61', 'sdsd22', '123456', '1', null, '男');
+INSERT INTO `yuangong` VALUES ('22', '幻神', '剑道联盟', '59', 'sd223', '123456', '1', null, '男');
