@@ -42,15 +42,27 @@ router.get("/news", function(req, res, next) {
   })
 
 });
+router.get("/rjsj", function(req, res, next) {
+
+
+      res.render("rjsj");
+
+
+
+});
 router.get("/cp", function(req, res, next) {
   let connect =select.getconnect();
   let sql ='select * from cp';
   let sql2='select * from cp where neibie="动中通卫通天线"';
   let sql3='select * from cp where neibie="静中通卫通天线"';
-  connect.query(sql + ";" + sql2+ ";" + sql3,function(err,row){
+  let sql4='select * from cp where neibie="船载卫通天线"';
+  let sql5='select * from cp where neibie="相控阵卫通天线"';
+  let sql6='select * from cp where neibie="S波段动中通天线"';
+
+  connect.query(sql + ";" + sql2+ ";" + sql3+ ";" + sql4+ ";" + sql5+ ";" + sql6,function(err,row){
     if(err) throw err;
     if(row[0]){
-      res.render("cp",{ data: row[0],dzt: row[1],jzt: row[2],biaoti:0});
+      res.render("cp",{ data: row[0],dzt: row[1],jzt: row[2],cz: row[3],xkz: row[4],sbd: row[5],biaoti:0});
     }else{
       res.render("xiexie", { data: "查询出错" });
     }
@@ -69,7 +81,7 @@ router.get("/cp/jzt", function(req, res, next) {
     if(err) throw err;
     if(row[0]){
       let html= fs.readFileSync('views/jzt.html')
-      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0,cz:0,xkz:0,sbd:0});
     }else{
       res.render("xiexie", {data: "查询出错"});
     }
@@ -84,7 +96,7 @@ router.get("/cp/dzt", function(req, res, next) {
     if(err) throw err;
     if(row[0]){
       let html= fs.readFileSync('views/dzt.html')
-      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0,cz:0,xkz:0,sbd:0});
     }else{
       res.render("xiexie", {data: "查询出错"});
     }
@@ -99,7 +111,7 @@ router.get("/cp/cz", function(req, res, next) {
     if(err) throw err;
     if(row[0]){
       let html= fs.readFileSync('views/cz.html')
-      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0,cz:0,xkz:0,sbd:0});
     }else{
       res.render("xiexie", {data: "查询出错"});
     }
@@ -114,7 +126,7 @@ router.get("/cp/xkz", function(req, res, next) {
     if(err) throw err;
     if(row[0]){
       let html= fs.readFileSync('views/xkz.html')
-      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0,cz:0,xkz:0,sbd:0});
     }else{
       res.render("xiexie", {data: "查询出错"});
     }
@@ -129,7 +141,7 @@ router.get("/cp/sbd", function(req, res, next) {
     if(err) throw err;
     if(row[0]){
       let html= fs.readFileSync('views/sbd.html')
-      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0});
+      res.render("cp",{ data:row,html:html,biaoti:biaoti,jzt:0,dzt:0,cz:0,xkz:0,sbd:0});
     }else{
       res.render("xiexie", {data: "查询出错"});
     }

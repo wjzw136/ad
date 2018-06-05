@@ -170,9 +170,7 @@ router.post("/addyg", function(req, res, next) {
     let zhanghao = req.body.zhanghao;
     let mima = "123456";
     let lv = "1";
-    let sql =
-      "INSERT INTO yuangong ( name,zhiwei,bumen,zhanghao,mima,lv,xingbie )VALUES( ?,?,?,?,?,?,?)";
-
+    let sql ="INSERT INTO yuangong ( name,zhiwei,bumen,zhanghao,mima,lv,xingbie )VALUES( ?,?,?,?,?,?,?)";
     connect.query(sql, [name, zhiwei, bumen, zhanghao, mima, lv,xingbie], function(
       err,
       rows,
@@ -190,7 +188,6 @@ router.post("/addyg", function(req, res, next) {
     res.redirect("/login");
   }
 });
-
 router.post("/addcp", upload.any(), function(req, res, next) {
   if (req.cookies.user) {
     let connect = select.getconnect();
@@ -207,9 +204,7 @@ router.post("/addcp", upload.any(), function(req, res, next) {
     }else{
       var imgurl = "/uploads/moren.jpg"
     }
-
-    let sql =
-      "INSERT INTO cp ( name, miaoshu,tedian,changjing,imgurl,neibie,fangan,bianhao)VALUES( ?,?,?,?,?,?,?,?)";
+    let sql ="INSERT INTO cp ( name, miaoshu,tedian,changjing,imgurl,neibie,fangan,bianhao)VALUES( ?,?,?,?,?,?,?,?)";
     connect.query(
       sql,
       [name, miaoshu, tedian, changjing, imgurl, neibie, fangan,bianhao],
