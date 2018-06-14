@@ -307,7 +307,6 @@ router.get('/news/:id',function(req, res, next){
     }
   })
   connect.end();
-
 })
 
 
